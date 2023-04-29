@@ -17,13 +17,13 @@ function App() {
       <div className='h-screen flex items-center flex-col ' style={{background: 'rgb(25,28,54)  linear-gradient(90deg, rgba(25,28,54,1) 0%, rgba(90,144,154,1) 50%, rgba(36,74,101,1) 100%)'
       }}>
         <Navbar/>
-      </div>
         <Routes>
           <Route path='/' element={ <Home/> }/>
           <Route path='/periphery' element={ <Periphery/> }/>
           <Route path='/about' element={ <About/> }/>
           <Route path='/blogs' element={ <Blogs/> }/>
         </Routes>
+      </div>
     </div>
   )
 }

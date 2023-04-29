@@ -1,26 +1,35 @@
 import React from 'react'
 import { products } from '../../dataBase/dataBase'
 import { v4 as uuidv4 } from 'uuid';
-
+import { MdBalance } from 'react-icons/md'
 
 export default function PeripheryItems() {
   return (
-    <div className='flex flex-col w-[60%]'>
+    <div className='flex flex-col w-[60%] '>
+        <div className='w-[1000px] h-auto p-2 rounded-md bg-gray-900'>
         {
-        products.map((item) => {
-            return (
-                <div className='w-[65%] bg-[#1a223f] h-[65px]' key={item?.id}>
-                    <div className='w-[65%] h-full flex'>
-                        <img src={item?.image} alt="" />
-                        <p className='text-white'>{item?.title}</p>
+            products.map((item) => {
+                return (
+                    <div className='w-full bg-[#1a223f] h-[104px] p-[20px] flex' key={item?.id}>
+                        <div className='w-[70%] h-full flex gap-3'>
+                            <img src={item?.image} className='w-[80px] h-[64px]' alt="" />
+                            <span className='text-white py-2'>{item?.title}</span>
+                        </div>
+                        <div className='w-[30%] h-full flex justify-end flex-col'>
+                            <div className='flex gap-3 items-center'>
+                                <span className='text-white text-base font-medium'>{item?.price} $</span>
+                                <button className='bg-[#62dcff] font-semibold text-sm text-[#181f39] py-[8px] px-[12px] rounded-md  '>ДОБАВИТЬ</button>
+                            </div>
+                            <div>
+                                <a href="" className=' flex gap-3 text-[#8190ca]'><MdBalance className='w-6 h-6'/>В Сравнение</a>
+                            </div>
+                        </div>
                     </div>
-                    <div className='w-[25%] h-full'>
-
-                    </div>
-                </div>
-            )
-        })
+                )
+            })
         }
+        </div>
+        <div></div>
     </div>
   )
 }
