@@ -7,24 +7,24 @@ import About from './pages/About';
 import Blogs from './pages/Blogs';
 import { Route, Routes } from 'react-router-dom'
 import Navbar from './Components/ui/Navbar';
+import Layout from './layout/Layout';
 
 function App() {
 
 
   console.log(products);
   return (
-    <div>
       <div className='h-screen flex items-center flex-col ' style={{background: 'rgb(25,28,54)  linear-gradient(90deg, rgba(25,28,54,1) 0%, rgba(90,144,154,1) 50%, rgba(36,74,101,1) 100%)'
       }}>
-        <Navbar/>
         <Routes>
-          <Route path='/' element={ <Home/> }/>
-          <Route path='/periphery' element={ <Periphery/> }/>
-          <Route path='/about' element={ <About/> }/>
-          <Route path='/blogs' element={ <Blogs/> }/>
+          <Route element={<Layout/>}>
+            <Route path='/' element={ <Home/> }/>
+            <Route path='/about' element={ <About/> }/>
+            <Route path='/blogs' element={ <Blogs/> }/>
+          </Route>
+            <Route path='/periphery' element={ <Periphery/> }/>
         </Routes>
       </div>
-    </div>
   )
 }
 

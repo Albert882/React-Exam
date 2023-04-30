@@ -5,8 +5,7 @@ import { MdBalance } from 'react-icons/md'
 
 export default function PeripheryItems() {
   return (
-    <div className='flex flex-col w-[60%] '>
-        <div className='w-[1000px] h-auto p-2 rounded-md bg-gray-900'>
+        <div className='w-[1000px] h-auto p-2 rounded-md'>
         {
             products.map((item) => {
                 return (
@@ -26,9 +25,8 @@ export default function PeripheryItems() {
                         </div>
                     </div>
                 )
-            })
+        })
         }
-        </div>
         <div></div>
     </div>
   )
