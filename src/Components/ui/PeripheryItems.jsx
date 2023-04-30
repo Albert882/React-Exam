@@ -3,12 +3,12 @@ import { products } from '../../dataBase/dataBase'
 import { v4 as uuidv4 } from 'uuid';
 import { MdBalance } from 'react-icons/md'
 
-export default function PeripheryItems() {
+export default function PeripheryItems({info}) {
   return (
         <div className='w-[55%] h-auto p-2'>
         {
             products.map((item) => {
-                if (item?.type === "Rugs") {
+                if (item?.type === info     ) {
                         item.id = uuidv4()
                     
                         return (
