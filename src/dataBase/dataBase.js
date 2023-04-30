@@ -1,9 +1,10 @@
 import { BiWifi, BiBluetooth } from 'react-icons/bi'
+import {v4 as uuid} from "uuid"
 
 
 export const products = [
     {
-        "trype": "Rugs",
+        "type": "Rugs",
         "title": "ASUS TUF GAMING P3",
         "brand": "Asus",
         "price": 2400,
@@ -17,10 +18,11 @@ export const products = [
         "wireless charger": null,
         "additionalInformation": null,
         "description": "TUF Gaming P3 – это прочный коврик для мыши с гладкой тканевой поверхностью, обеспечивающей высокую точность позиционирования. Он оформлен в стиле серии TUF Gaming, обладает простроченными краями и резиновой основой и прекрасно подходит для игр любых жанров. Идеально гладкая тканевая поверхность коврика TUF Gaming P3 прекрасно подходит для игр. Мышь скользит по нему без малейших усилий, позволяя достичь высокой скорости и точности позиционирования, которые так необходимы для победы.",
-        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/ASUS%20TUF%20Gaming%20P3_preview.png"
+        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/ASUS%20TUF%20Gaming%20P3_preview.png",
+        "id": uuid(),
     },
     {
-        "trype": "Rugs",
+        "type": "Rugs",
         "title": "ASUS ROG Sheath PINK",
         "brand": "Asus",
         "price": 4400,
@@ -34,10 +36,11 @@ export const products = [
         "wireless charger": false,
         "additionalInformation": null,
         "description": "Мягкий тканевый коврик для мыши с большой и гладкой поверхностью, противоскользящим основанием и простроченными краями",
-        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/ASUS%20ROG%20Sheath%20PINK_preview.png"
+        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/ASUS%20ROG%20Sheath%20PINK_preview.png",
+        "id": uuid(),
     },
     {
-        "trype": "Rugs",
+        "type": "Rugs",
         "title": "ASUS ROG BALTEUS",
         "brand": "Asus",
         "price": 12400,
@@ -51,10 +54,11 @@ export const products = [
         "wireless charger": false,
         "additionalInformation": "USB - РАЗЪЕМ ДЛЯ ПОДКЛЮЧЕНИЯ ДОПОЛНИТЕЛЬНЫХ УСТРОЙСТВ",
         "description": "Коврик ASUS ROG Balteus применяется для обеспечения точности работы компьютерной мыши в процессе игры. Предмет выполнен в сером цвете с рисунком логотипа. Материал изготовления – резина, что обеспечивает отсутствие скольжения коврика при движении руки. ASUS ROG Balteus не оснащен подставкой под запястье, беспроводной зарядкой, обладает подсветкой. Размер – средний, параметры составляют 370x320x7.9 мм. Дополнительными опциями являются USB-разъем для подключения дополнительных устройств, 15-зонная подсветка Aura.",
-        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/ASUS%20ROG%20Balteus%20(1).png"
+        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/ASUS%20ROG%20Balteus%20(1).png",
+        "id": uuid(),
     },
     {
-        "trype": "Rugs",
+        "type": "Rugs",
         "title": "ASUS NH01 ROG BALTEUS QI",
         "brand": "Asus",
         "price": 12400,
@@ -68,10 +72,11 @@ export const products = [
         "wireless charger": false,
         "additionalInformation": "USB - РАЗЪЕМ ДЛЯ ПОДКЛЮЧЕНИЯ ДОПОЛНИТЕЛЬНЫХ УСТРОЙСТВ",
         "description": "Коврик ASUS ROG Balteus применяется для обеспечения точности работы компьютерной мыши в процессе игры. Предмет выполнен в сером цвете с рисунком логотипа. Материал изготовления – резина, что обеспечивает отсутствие скольжения коврика при движении руки. ASUS ROG Balteus не оснащен подставкой под запястье, беспроводной зарядкой, обладает подсветкой. Размер – средний, параметры составляют 370x320x7.9 мм. Дополнительными опциями являются USB-разъем для подключения дополнительных устройств, 15-зонная подсветка Aura.",
-        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/Asus%20NH01%20ROG%20BALTEUS%20QI.png"
+        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/Asus%20NH01%20ROG%20BALTEUS%20QI.png",
+        "id": uuid(),
     },
     {
-        "trype": "Rugs",
+        "type": "Rugs",
         "title": "BLIZZARD OVERWATCH CHARACTER ICON",
         "brand": "Blizzard",
         "price": 2900,
@@ -85,10 +90,11 @@ export const products = [
         "wirelesscharger": false,
         "additionalInformation": null,
         "description": "Коврик для мыши Character Icon даст вашим быстрым щелчкам и разрушительным ударам в голову красочную основу. Оживите свое игровое пространство, добавив его в свою коллекцию Overwatch. Ковёр Overwatch Character Icon специально разработан для фанатов игры Overwatch. Покрытие коврика выполнено из плотной ткани, которая усиливает чувствительность взаимодействия игровой мыши с поверхностью. Резиновое основание не даёт коврику скользить по столу, когда вы активно двигаете рукой. Износостойкие края с гладкой прострочкой предотвращают преждевременный износ при ежедневном использовании. С целью уменьшения частоты стирки производитель рекомендует через день протирать изделие влажными салфетками.",
-        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/Blizzard%20Overwatch%20Character%20Icon_preview.png"
+        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/Blizzard%20Overwatch%20Character%20Icon_preview.png",
+        "id": uuid(),
     },
     {
-        "trype": "Rugs",
+        "type": "Rugs",
         "title": "CORSAIR MM200 CLOTH GAMING MOUSE MAT - MEDIUM",
         "brand": "Crosair",
         "price": 1900,
@@ -102,10 +108,11 @@ export const products = [
         "wirelesscharger": null,
         "additionalInformation": null,
         "description": "Коврик Corsair MM200 Cloth Gaming Mouse Mat - Medium – это надежный аксессуар, разработанный специально для того, чтобы вы могли получить абсолютный комфорт в процессе игры. Модель с покрытием speed гарантирует плавное и точное скольжение мыши. Изготовлен коврик из высококачественной ткани, которая гарантирует долговечность и износостойкость даже при ежедневной интенсивной эксплуатации. Резиновая основа Corsair MM200 Cloth Gaming Mouse Mat - Medium обеспечивает прекрасное сцепление с поверхностью, поэтому коврик не скользит даже в процессе интенсивных манипуляций. Коврик обладает средними размерами 360X300X2 мм, что позволяет вам получить достаточно большую область для управления мышью. Аксессуар предусматривает небольшой вес, что наряду с удобной упаковкой способствует комфортной транспортировке. Ярким акцентом на черном полотне является желтая полоса, которую разделяет логотип.",
-        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/Corsair%20MM200%20Cloth%20Gaming%20Mouse%20Mat%20-%20Medium_preview.png"
+        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/Corsair%20MM200%20Cloth%20Gaming%20Mouse%20Mat%20-%20Medium_preview.png",
+        "id": uuid(),
     },
     {
-        "trype": "Rugs",
+        "type": "Rugs",
         "title": "CORSAIR MM200 CLOTH GAMING MOUSE MAT - EXTENDED",
         "brand": "Crosair",
         "price": 3800,
@@ -119,10 +126,11 @@ export const products = [
         "wirelesscharger": null,
         "additionalInformation": null,
         "description": "Коврик Corsair MM200 Cloth Gaming Mouse Mat - Medium – это надежный аксессуар, разработанный специально для того, чтобы вы могли получить абсолютный комфорт в процессе игры. Модель с покрытием speed гарантирует плавное и точное скольжение мыши. Изготовлен коврик из высококачественной ткани, которая гарантирует долговечность и износостойкость даже при ежедневной интенсивной эксплуатации. Резиновая основа Corsair MM200 Cloth Gaming Mouse Mat - Medium обеспечивает прекрасное сцепление с поверхностью, поэтому коврик не скользит даже в процессе интенсивных манипуляций. Коврик обладает средними размерами 360X300X2 мм, что позволяет вам получить достаточно большую область для управления мышью. Аксессуар предусматривает небольшой вес, что наряду с удобной упаковкой способствует комфортной транспортировке. Ярким акцентом на черном полотне является желтая полоса, которую разделяет логотип.",
-        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/Corsair%20MM200%20Cloth%20Gaming%20Mouse%20Mat%20-%20Extended_preview.png"
+        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/Corsair%20MM200%20Cloth%20Gaming%20Mouse%20Mat%20-%20Extended_preview.png",
+        "id": uuid(),
     },
     {
-        "trype": "Rugs",
+        "type": "Rugs",
         "title": "HYPERX FURY S PRO M",
         "brand": "HyperX",
         "price": 1700,
@@ -136,10 +144,11 @@ export const products = [
         "wirelesscharger": null,
         "additionalInformation": null,
         "description": "Коврик HyperX Fury S Pro M можно рекомендовать любому профессиональному геймеру, для которого особенно важен комфорт управления мышью в жестоких онлайн-сражениях. Он имеет габариты 360 х 300 мм и предлагает игроку большое пространство для движения мыши по специальной тканевой поверхности, оптимальной для мышей с оптическим сенсором. Сверху коврик имеет гладкую поверхность, способствующую свободному скольжению манипулятора, а снизу он снабжен резиновым основанием, которое не позволяет ему двигаться по компьютерному столу. Украшенный логотипом производителя среднего размера черный коврик для мыши HyperX Fury S Pro M можно свернуть в трубочку для большего удобства перевозки в сумке или рюкзаке. Подарив геймеру полный контроль над перемещениями мыши, он станет по-настоящему востребованным и удобным аксессуаром, верным спутником своего владельца. Качественно изготовленный коврик с простроченным краем выдержит долгую и активную эксплуатацию.",
-        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/HyperX%20Fury%20S%20Pro%20M_preview.png"
+        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/HyperX%20Fury%20S%20Pro%20M_preview.png",
+        "id": uuid(),
     },
     {
-        "trype": "Rugs",
+        "type": "Rugs",
         "title": "HYPERX FURY S PRO XL",
         "brand": "HyperX",
         "price": 3900,
@@ -153,10 +162,11 @@ export const products = [
         "wirelesscharger": null,
         "additionalInformation": null,
         "description": "Коврик HyperX Fury S Pro M можно рекомендовать любому профессиональному геймеру, для которого особенно важен комфорт управления мышью в жестоких онлайн-сражениях. Он имеет габариты 360 х 300 мм и предлагает игроку большое пространство для движения мыши по специальной тканевой поверхности, оптимальной для мышей с оптическим сенсором. Сверху коврик имеет гладкую поверхность, способствующую свободному скольжению манипулятора, а снизу он снабжен резиновым основанием, которое не позволяет ему двигаться по компьютерному столу. Украшенный логотипом производителя среднего размера черный коврик для мыши HyperX Fury S Pro M можно свернуть в трубочку для большего удобства перевозки в сумке или рюкзаке. Подарив геймеру полный контроль над перемещениями мыши, он станет по-настоящему востребованным и удобным аксессуаром, верным спутником своего владельца. Качественно изготовленный коврик с простроченным краем выдержит долгую и активную эксплуатацию.",
-        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/HyperX%20Fury%20S%20Pro%20XL_preview.png"
+        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/HyperX%20Fury%20S%20Pro%20XL_preview.png",
+        "id": uuid(),
     },
     {
-        "trype": "Rugs",
+        "type": "Rugs",
         "title": "HYPERX FURY ULTRA RGB M",
         "brand": "HyperX",
         "price": 8100,
@@ -170,10 +180,11 @@ export const products = [
         "wirelesscharger": null,
         "additionalInformation": null,
         "description": "Коврик HyperX Fury S Pro M можно рекомендовать любому профессиональному геймеру, для которого особенно важен комфорт управления мышью в жестоких онлайн-сражениях. Он имеет габариты 360 х 300 мм и предлагает игроку большое пространство для движения мыши по специальной тканевой поверхности, оптимальной для мышей с оптическим сенсором. Сверху коврик имеет гладкую поверхность, способствующую свободному скольжению манипулятора, а снизу он снабжен резиновым основанием, которое не позволяет ему двигаться по компьютерному столу. Украшенный логотипом производителя среднего размера черный коврик для мыши HyperX Fury S Pro M можно свернуть в трубочку для большего удобства перевозки в сумке или рюкзаке. Подарив геймеру полный контроль над перемещениями мыши, он станет по-настоящему востребованным и удобным аксессуаром, верным спутником своего владельца. Качественно изготовленный коврик с простроченным краем выдержит долгую и активную эксплуатацию.",
-        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/HyperX%20Fury%20Ultra%20RGB%20M_preview.png"
+        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/HyperX%20Fury%20Ultra%20RGB%20M_preview.png",
+        "id": uuid(),
     },
     {
-        "trype": "Rugs",
+        "type": "Rugs",
         "title": "THERMALTAKE LEVEL 20 RGB L",
         "brand": "Thermaltake",
         "price": 7200,
@@ -187,10 +198,11 @@ export const products = [
         "wirelesscharger": null,
         "additionalInformation": null,
         "description": "Игровой коврик для мыши Level 20 RGB Gaming Mouse Pad создан с применением поверхности обеспечивающей отличною скорость реагирования и точность для максимально сбалансированного игрового процесса. Основание Level 20 RGB Gaming Mouse Pad имеет прорезиненную структуру с особым протектором, что предотвращает скольжение коврика по поверхности стола. Это несомненно, добавляет уверенности в каждом движении.",
-        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/Thermaltake%20Level%2020%20RGB%20L_preview.png"
+        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/Thermaltake%20Level%2020%20RGB%20L_preview.png",
+        "id": uuid(),
     },
     {
-        "trype": "Rugs",
+        "type": "Rugs",
         "title": "RAZER GIGANTUS V2",
         "brand": "Razer",
         "price": 2400,
@@ -204,10 +216,11 @@ export const products = [
         "wirelesscharger": null,
         "additionalInformation": null,
         "description": "Игровой коврик для мыши Level 20 RGB Gaming Mouse Pad создан с применением поверхности обеспечивающей отличною скорость реагирования и точность для максимально сбалансированного игрового процесса. Основание Level 20 RGB Gaming Mouse Pad имеет прорезиненную структуру с особым протектором, что предотвращает скольжение коврика по поверхности стола. Это несомненно, добавляет уверенности в каждом движении.",
-        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/Razer%20Gigantus%20V2.png"
+        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/Razer%20Gigantus%20V2.png",
+        "id": uuid(),
     },
     {
-        "trype": "Rugs",
+        "type": "Rugs",
         "title": "RAZER GOLIATHUS CHROMA MERCURY",
         "brand": "Razer",
         "price": 8900,
@@ -221,10 +234,11 @@ export const products = [
         "wirelesscharger": null,
         "additionalInformation": null,
         "description": "Игровой коврик Razer Goliathus Chroma Mercury благодаря огромным размерам 92x29.4 см позволит разместить на нем клавиатуру вместе с мышкой. При этом устройства не будут мешать друг другу и вам даже при активной игре. Тканевое покрытие гарантирует точный отклик любой модели мыши и типа сенсора на команды и малейшие движения. Изделие Razer Goliathus Chroma Mercury представлено в серой расцветке, а также дополнено яркой RGB-подсветкой с питанием по облегченному кабелю в оплетке 2.1 м и синхронизацией между устройствами. Это превращает обычный коврик в стильный элемент декора. Аксессуар дополнен балансом контроля и скорости, поддержкой Razer Synapse 3, а также удобным креплением для фиксации шнура компьютерной мыши.",
-        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/Razer%20Goliathus%20Chroma%20Mercury.png"
+        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/Razer%20Goliathus%20Chroma%20Mercury.png",
+        "id": uuid(),
     },
     {
-        "trype": "Rugs",
+        "type": "Rugs",
         "title": "RAZER GIGANTUS V2",
         "brand": "Razer",
         "price": 5200,
@@ -238,7 +252,8 @@ export const products = [
         "wirelesscharger": null,
         "additionalInformation": null,
         "description": "Коврик Razer Gigantus V2 [RZ02-03330400-R3M1] − удобный аксессуар прямоугольной формы, обладающий размерами 940x410x4 мм. Его толщина 4 мм обеспечивает высокую прочность изделия при сохранении комфорта эксплуатации: коврик будет почти не ощутим для пользователя. Верхнее покрытие по технологии speed + control изготавливается из мягкой и эластичной ткани, которая обладает плотной фактурой. Это способствует легкости и высокой скорости скольжения. При этом, точность скольжения сохраняется. Коврик Razer Gigantus V2 [RZ02-03330400-R3M1] ложится на резиновое основание, которое исключает его смещение даже при интенсивных движениях мышью. Пенный наполнитель, размещенный между тканевым и резиновым покрытиями, позволяет коврику оставаться плоским и ровным на любых поверхностях. Аксессуар будет одинаково эффективен для манипуляторов с любой чувствительностью сенсора.",
-        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/Razer%20Gigantus%20V2%201.png"
+        "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/Razer%20Gigantus%20V2%201.png",
+        "id": uuid(),
     },
     {
         "type": "Readybuilds",
@@ -258,6 +273,7 @@ export const products = [
         "videoCart": "GeForce GTX 1650",
         "processor": "Intel Core i3-10100",
         "interface": false,
+        "id": uuid(),
     },
     {
         "type": "Readybuilds",
@@ -277,6 +293,7 @@ export const products = [
         "videoCart": "GeForce GTX 1660 super",
         "processor": "Intel Core i3-10100",
         "interface": false,
+        "id": uuid(),
     },
     {
         "type": "Readybuilds",
@@ -296,6 +313,7 @@ export const products = [
         "videoCart": "GeForce RTX 3050 Dual",
         "processor": "Intel Core i3-10100",
         "interface": false,
+        "id": uuid(),
     },
     {
         "type": "Readybuilds",
@@ -315,6 +333,7 @@ export const products = [
         "videoCart": "AMD Radeon RX 6600 Fighter",
         "processor": "Intel Core i3-12100",
         "interface": false,
+        "id": uuid(),
     },
     {
         "type": "Readybuilds",
@@ -334,6 +353,7 @@ export const products = [
         "videoCart": "GeForce RTX 2060 OC",
         "processor": "Intel Core i5-10400",
         "interface": false,
+        "id": uuid(),
     },
     {
         "type": "Readybuilds",
@@ -353,6 +373,7 @@ export const products = [
         "videoCart": "GeForce RTX 3060 GAMING",
         "processor": "Intel Core i5-10400",
         "interface": false,
+        "id": uuid(),
     },
     {
         "type": "Readybuilds",
@@ -372,6 +393,7 @@ export const products = [
         "videoCart": "AMD Radeon RX 6650 XT",
         "processor": "Intel Core i5-10400",
         "interface": false,
+        "id": uuid(),
     },
     {
         "type": "Readybuilds",
@@ -391,6 +413,7 @@ export const products = [
         "videoCart": "GeForce RTX 3060",
         "processor": "Intel Core i5-10400",
         "interface": false,
+        "id": uuid(),
     },
     {
         "type": "Readybuilds",
@@ -410,6 +433,7 @@ export const products = [
         "videoCart": "GeForce RTX 3060",
         "processor": "Intel Core i5-12400",
         "interface": false,
+        "id": uuid(),
     },
     {
         "type": "Readybuilds",
@@ -429,6 +453,7 @@ export const products = [
         "videoCart": "GeForce RTX 3060 Ti",
         "processor": "Intel Core i5-12400",
         "interface": false,
+        "id": uuid(),
     },
     {
         "type": "Readybuilds",
@@ -448,6 +473,7 @@ export const products = [
         "videoCart": "GeForce RTX 3070",
         "processor": "Intel Core i5-12400",
         "interface": false,
+        "id": uuid(),
     },
     {
         "type": "Readybuilds",
@@ -467,5 +493,6 @@ export const products = [
         "videoCart": "GeForce RTX 3070",
         "processor": "Intel Core i5-13400",
         "interface": false,
+        "id": uuid(),
     },
 ]
