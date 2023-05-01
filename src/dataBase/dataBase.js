@@ -4,7 +4,7 @@ import {v4 as uuid} from "uuid"
 
 export const products = [
     {
-        "type": "Rugs",
+        "type": "Rug",
         "title": "ASUS TUF GAMING P3",
         "brand": "Asus",
         "price": 2400,
@@ -22,7 +22,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Rugs",
+        "type": "Rug",
         "title": "ASUS ROG Sheath PINK",
         "brand": "Asus",
         "price": 4400,
@@ -40,7 +40,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Rugs",
+        "type": "Rug",
         "title": "ASUS ROG BALTEUS",
         "brand": "Asus",
         "price": 12400,
@@ -58,7 +58,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Rugs",
+        "type": "Rug",
         "title": "ASUS NH01 ROG BALTEUS QI",
         "brand": "Asus",
         "price": 12400,
@@ -76,7 +76,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Rugs",
+        "type": "Rug",
         "title": "BLIZZARD OVERWATCH CHARACTER ICON",
         "brand": "Blizzard",
         "price": 2900,
@@ -94,7 +94,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Rugs",
+        "type": "Rug",
         "title": "CORSAIR MM200 CLOTH GAMING MOUSE MAT - MEDIUM",
         "brand": "Crosair",
         "price": 1900,
@@ -112,7 +112,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Rugs",
+        "type": "Rug",
         "title": "CORSAIR MM200 CLOTH GAMING MOUSE MAT - EXTENDED",
         "brand": "Crosair",
         "price": 3800,
@@ -130,7 +130,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Rugs",
+        "type": "Rug",
         "title": "HYPERX FURY S PRO M",
         "brand": "HyperX",
         "price": 1700,
@@ -148,7 +148,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Rugs",
+        "type": "Rug",
         "title": "HYPERX FURY S PRO XL",
         "brand": "HyperX",
         "price": 3900,
@@ -161,12 +161,12 @@ export const products = [
         "dimensions": "900Х420 ММ",
         "wirelesscharger": null,
         "additionalInformation": null,
-        "description": "Коврик HyperX Fury S Pro M можно рекомендовать любому профессиональному геймеру, для которого особенно важен комфорт управления мышью в жестоких онлайн-сражениях. Он имеет габариты 360 х 300 мм и предлагает игроку большое пространство для движения мыши по специальной тканевой поверхности, оптимальной для мышей с оптическим сенсором. Сверху коврик имеет гладкую поверхность, способствующую свободному скольжению манипулятора, а снизу он снабжен резиновым основанием, которое не позволяет ему двигаться по компьютерному столу. Украшенный логотипом производителя среднего размера черный коврик для мыши HyperX Fury S Pro M можно свернуть в трубочку для большего удобства перевозки в сумке или рюкзаке. Подарив геймеру полный контроль над перемещениями мыши, он станет по-настоящему востребованным и удобным аксессуаром, верным спутником своего владельца. Качественно изготовленный коврик с простроченным краем выдержит долгую и активную эксплуатацию.",
+        "description": "Коврик HyperX Fury S Pro M можно рекомендовать любому профессиональному геймеру, для которого особенно важен комфорт управ-ления мышью в жестоких онлайн-сражениях. Он имеет габариты 360 х 300 мм и предлагает игроку большое пространство для движения мыши по специальной тканевой поверхности, оптимальной для мышей с оптическим сенсором. Сверху коврик имеет гладкую поверхность, способствующую свободному скольжению манипулятора, а снизу он снабжен резиновым основанием, которое не позволяет ему двигаться по компьютерному столу. Украшенный логотипом производителя среднего размера черный коврик для мыши HyperX Fury S Pro M можно свернуть в трубочку для большего удобства перевозки в сумке или рюкзаке. Подарив геймеру полный контроль над перемещениями мыши, он станет по-настоящему востребованным и удобным аксессуаром, верным спутником своего владельца. Качественно изготовленный коврик с простроченным краем выдержит долгую и активную эксплуатацию.",
         "image": "https://lightflightpc.ru/uploads/Devices/Mousepad/HyperX%20Fury%20S%20Pro%20XL_preview.png",
         "id": uuid(),
     },
     {
-        "type": "Rugs",
+        "type": "Rug",
         "title": "HYPERX FURY ULTRA RGB M",
         "brand": "HyperX",
         "price": 8100,
@@ -184,7 +184,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Rugs",
+        "type": "Rug",
         "title": "THERMALTAKE LEVEL 20 RGB L",
         "brand": "Thermaltake",
         "price": 7200,
@@ -202,7 +202,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Rugs",
+        "type": "Rug",
         "title": "RAZER GIGANTUS V2",
         "brand": "Razer",
         "price": 2400,
@@ -220,7 +220,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Rugs",
+        "type": "Rug",
         "title": "RAZER GOLIATHUS CHROMA MERCURY",
         "brand": "Razer",
         "price": 8900,
@@ -238,7 +238,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Rugs",
+        "type": "Rug",
         "title": "RAZER GIGANTUS V2",
         "brand": "Razer",
         "price": 5200,
@@ -256,7 +256,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Readybuilds",
+        "type": "Readybuild",
         "image": "https://lightflightpc.ru/uploads/PC/Newbie%201/Newbie%201.jpg",
         "windowimage": "https://lightflightpc.ru/uploads/PC/Newbie%201.png",
         "title": "NEWBIE 1",
@@ -276,7 +276,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Readybuilds",
+        "type": "Readybuild",
         "image": "https://lightflightpc.ru/uploads/PC/Newbie%202/%D0%9D%D0%B0%D1%88%D0%B8%20%D1%84%D0%BE%D1%82%D0%BE/Newbie%202.jpg",
         "windowimage": "https://lightflightpc.ru/uploads/PC/Newbie%202.png",
         "title": "NEWBIE 2",
@@ -296,7 +296,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Readybuilds",
+        "type": "Readybuild",
         "image": "https://lightflightpc.ru/uploads/PC/%D0%9D%D0%B0%D1%88%D0%B8%20%D1%84%D0%BE%D1%82%D0%BE/Newbie%203/Bez-imeni-1.jpg",
         "windowimage": "https://lightflightpc.ru/uploads/PC/%D0%9D%D0%B0%D1%88%D0%B8%20%D1%84%D0%BE%D1%82%D0%BE/Newbie%203/Newbie%202%20(1).png",
         "title": "NEWBIE 3",
@@ -316,7 +316,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Readybuilds",
+        "type": "Readybuild",
         "image": "https://lightflightpc.ru/uploads/PC/%D0%9D%D0%B0%D1%88%D0%B8%20%D1%84%D0%BE%D1%82%D0%BE/Newbie%204/Newbie%204%20(1).jpg",
         "windowimage": "https://lightflightpc.ru/uploads/PC/Newbie%204%20(2).png",
         "title": "NEWBIE 4",
@@ -336,7 +336,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Readybuilds",
+        "type": "Readybuild",
         "image": "https://lightflightpc.ru/uploads/PC/Standard%201/Standard%201.jpg",
         "windowimage": "https://lightflightpc.ru/uploads/PC/Standard%201/Standard%201%20(main).png",
         "title": "STANDARD 1",
@@ -356,7 +356,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Readybuilds",
+        "type": "Readybuild",
         "image": "https://lightflightpc.ru/uploads/PC/Standart%202/Standart%202.jpg",
         "windowimage": "https://lightflightpc.ru/uploads/PC/Standart%202/Standart_2-removebg-preview.png",
         "title": "STANDARD 2",
@@ -376,7 +376,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Readybuilds",
+        "type": "Readybuild",
         "image": "https://lightflightpc.ru/uploads/PC/Standard%203/%D0%9D%D0%B0%D1%88%D0%B8%20%D1%84%D0%BE%D1%82%D0%BE/Standard%203%20(1).jpg",
         "windowimage": "https://lightflightpc.ru/uploads/PC/Standard%203/Standard%203%20(Main).png",
         "title": "STANDARD 3",
@@ -396,7 +396,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Readybuilds",
+        "type": "Readybuild",
         "image": "https://lightflightpc.ru/uploads/PC/Standard%204/%D0%9D%D0%B0%D1%88%D0%B8%20%D1%84%D0%BE%D1%82%D0%BE/Standard%204%20(1).jpg",
         "windowimage": "https://lightflightpc.ru/uploads/PC/Standard%204/Standard%204%20(main).png",
         "title": "STANDARD 4",
@@ -416,7 +416,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Readybuilds",
+        "type": "Readybuild",
         "image": "https://lightflightpc.ru/uploads/PC/Pro%201/Pro%201%20(1).jpg",
         "windowimage": "https://lightflightpc.ru/uploads/PC/Pro%201/Pro%201%20(main).png",
         "title": "PRO 1",
@@ -436,7 +436,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Readybuilds",
+        "type": "Readybuild",
         "image": "https://lightflightpc.ru/uploads/PC/Pro%202/Pro%202%20(1).jpg",
         "windowimage": "https://lightflightpc.ru/uploads/PC/Pro%202/Pro%202.png",
         "title": "PRO 2",
@@ -456,7 +456,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Readybuilds",
+        "type": "Readybuild",
         "image": "https://lightflightpc.ru/uploads/PC/%D0%9D%D0%B0%D1%88%D0%B8%20%D1%84%D0%BE%D1%82%D0%BE/Pro%205/%D0%9D%D0%B0%D1%88%D0%B8%20%D1%84%D0%BE%D1%82%D0%BE/Bez-imeni-1%20(1).jpg",
         "windowimage": "https://lightflightpc.ru/uploads/PC/Pro%205.png",
         "title": "PRO 3",
@@ -476,7 +476,7 @@ export const products = [
         "id": uuid(),
     },
     {
-        "type": "Readybuilds",
+        "type": "Readybuild",
         "image": "https://lightflightpc.ru/uploads/PC/Pro%204/Pro%204.jpg",
         "windowimage": "https://lightflightpc.ru/uploads/PC/Pro%204/Pro%204%20(main).png",
         "title": "PRO 4",

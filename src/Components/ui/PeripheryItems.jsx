@@ -10,12 +10,11 @@ export default function PeripheryItems({info}) {
             products.map((item) => {
                 if (item?.type === info     ) {
                         item.id = uuidv4()
-                    
                         return (
                             <div className='w-full bg-[#1a223f] h-[104px] p-[20px] border-b border-gray-500 flex' key={item?.id}>
                                 <div className='w-[70%] h-full flex gap-3'>
                                     <img src={item?.image} className='w-[80px] h-[64px]' alt="" />
-                                    <span className='text-white py-2'>{item?.title}</span>
+                                    <span className='text-white py-2 font-medium'>{item?.title}</span>
                                 </div>
                                 <div className='w-[30%] h-full flex justify-end flex-col'>
                                     <div className='flex gap-3 items-center'>

@@ -8,12 +8,6 @@ import {FiMonitor} from 'react-icons/fi';
 import {BsMouse, BsKeyboard, BsMic, BsWebcam} from 'react-icons/bs'
 
 export default function PeripheryCategories({info, handleChangeInfo}) {
-  const [active, setActive] = useState(false);
-
-  const handleBorderChange = () => {
-    setActive(true);
-  };
-
   const borderStyleButtomRight = {
     background: 'rgb(236,79,126)',
   };
@@ -39,13 +33,12 @@ export default function PeripheryCategories({info, handleChangeInfo}) {
           <li
             className="flex items-center gap-1 cursor-pointer z-[999] "
             onClick={() => {
-              handleBorderChange()
-              handleChangeInfo('Rugs')
+              handleChangeInfo('Rug')
             }}
             >
             <div className="w-[90px] h-[90px] flex justify-center items-center relative">
-              <div className="w-[45px] h-[45px] rounded-full absolute right-2 bottom-2 blur-[26px]" style={active ? borderStyleButtomRight : null}></div>
-              <div className="w-[45px] h-[45px] absolute left-2 top-2 rounded-full blur-[26px]" style={active ? borderStyleTopLeft : null}></div>
+              <div className="w-[45px] h-[45px] rounded-full absolute right-2 bottom-2 blur-[26px]" style={info === 'Rug' ? borderStyleButtomRight : null}></div>
+              <div className="w-[45px] h-[45px] absolute left-2 top-2 rounded-full blur-[26px]" style={info === 'Rug' ? borderStyleTopLeft : null}></div>
               <div className="w-[50px] h-[50px] z-[2] flex justify-center items-center rounded-xl"
               style={itemBg} >
                 <TbPictureInPicture
@@ -60,13 +53,12 @@ export default function PeripheryCategories({info, handleChangeInfo}) {
           <li
             className="flex items-center gap-1 cursor-pointer z-[999] "
             onClick={() => {
-              handleBorderChange()
-              handleChangeInfo('')
+              handleChangeInfo('GraphTable')
             }}
             >
             <div className="w-[90px] h-[90px] flex justify-center items-center relative">
-              <div className="w-[45px] h-[45px] rounded-full absolute right-2 bottom-2 blur-[26px]" style={active ? borderStyleButtomRight : null}></div>
-              <div className="w-[45px] h-[45px] absolute left-2 top-2 rounded-full blur-[26px]" style={active ? borderStyleTopLeft : null}></div>
+              <div className="w-[45px] h-[45px] rounded-full absolute right-2 bottom-2 blur-[26px]" style={info === 'GraphTable' ? borderStyleButtomRight : null}></div>
+              <div className="w-[45px] h-[45px] absolute left-2 top-2 rounded-full blur-[26px]" style={info === 'GraphTable' ? borderStyleTopLeft : null}></div>
               <div className="w-[50px] h-[50px] z-[2] flex justify-center items-center rounded-xl " 
               style={itemBg}>
                 <HiOutlinePencil
@@ -81,13 +73,12 @@ export default function PeripheryCategories({info, handleChangeInfo}) {
           <li
             className="flex items-center gap-1 cursor-pointer z-[999] "
             onClick={() => {
-              handleBorderChange()
-              handleChangeInfo('')
+              handleChangeInfo('HeadPhone')
             }}
             >
             <div className="w-[90px] h-[90px] flex justify-center items-center relative">
-              <div className="w-[45px] h-[45px] rounded-full absolute right-2 bottom-2 blur-[26px]" style={active ? borderStyleButtomRight : null}></div>
-              <div className="w-[45px] h-[45px] absolute left-2 top-2 rounded-full blur-[26px]" style={active ? borderStyleTopLeft : null}></div>
+              <div className="w-[45px] h-[45px] rounded-full absolute right-2 bottom-2 blur-[26px]" style={info === 'HeadPhone' ? borderStyleButtomRight : null}></div>
+              <div className="w-[45px] h-[45px] absolute left-2 top-2 rounded-full blur-[26px]" style={info === 'HeadPhone' ? borderStyleTopLeft : null}></div>
               <div className="w-[50px] h-[50px] z-[2] flex justify-center items-center rounded-xl "
               style={itemBg} >
                 <FaHeadphonesAlt
@@ -102,13 +93,12 @@ export default function PeripheryCategories({info, handleChangeInfo}) {
           <li
             className="flex items-center gap-1 cursor-pointer z-[999] "
             onClick={() => {
-              handleBorderChange()
-              handleChangeInfo('')
+              handleChangeInfo('Keyboard')
             }}
             >
             <div className="w-[90px] h-[90px] flex justify-center items-center relative">
-              <div className="w-[45px] h-[45px] rounded-full absolute right-2 bottom-2 blur-[26px]" style={active ? borderStyleButtomRight : null}></div>
-              <div className="w-[45px] h-[45px] absolute left-2 top-2 rounded-full blur-[26px]" style={active ? borderStyleTopLeft : null}></div>
+              <div className="w-[45px] h-[45px] rounded-full absolute right-2 bottom-2 blur-[26px]" style={info === 'Keyboard' ? borderStyleButtomRight : null}></div>
+              <div className="w-[45px] h-[45px] absolute left-2 top-2 rounded-full blur-[26px]" style={info === 'Keyboard' ? borderStyleTopLeft : null}></div>
               <div className="w-[50px] h-[50px] z-[2] flex justify-center items-center rounded-xl "
               style={itemBg} >
                 <BsKeyboard
@@ -123,13 +113,12 @@ export default function PeripheryCategories({info, handleChangeInfo}) {
           <li
             className="flex items-center gap-1 cursor-pointer z-[999] "
             onClick={() => {
-              handleBorderChange()
-              handleChangeInfo('')
+              handleChangeInfo('Microphone')
             }}
             >
             <div className="w-[90px] h-[90px] flex justify-center items-center relative">
-              <div className="w-[45px] h-[45px] rounded-full absolute right-2 bottom-2 blur-[26px]" style={active ? borderStyleButtomRight : null}></div>
-              <div className="w-[45px] h-[45px] absolute left-2 top-2 rounded-full blur-[26px]" style={active ? borderStyleTopLeft : null}></div>
+              <div className="w-[45px] h-[45px] rounded-full absolute right-2 bottom-2 blur-[26px]" style={info === 'Microphone' ? borderStyleButtomRight : null}></div>
+              <div className="w-[45px] h-[45px] absolute left-2 top-2 rounded-full blur-[26px]" style={info === 'Microphone' ? borderStyleTopLeft : null}></div>
               <div className="w-[50px] h-[50px] z-[2] flex justify-center items-center rounded-xl "
               style={itemBg} >
                 <BsMic
@@ -144,13 +133,12 @@ export default function PeripheryCategories({info, handleChangeInfo}) {
           <li
             className="flex items-center gap-1 cursor-pointer z-[999] "
             onClick={() => {
-              handleBorderChange()
-              handleChangeInfo('')
+              handleChangeInfo('Monitor')
             }}
             >
             <div className="w-[90px] h-[90px] flex justify-center items-center relative">
-              <div className="w-[45px] h-[45px] rounded-full absolute right-2 bottom-2 blur-[26px]" style={active ? borderStyleButtomRight : null}></div>
-              <div className="w-[45px] h-[45px] absolute left-2 top-2 rounded-full blur-[26px]" style={active ? borderStyleTopLeft : null}></div>
+              <div className="w-[45px] h-[45px] rounded-full absolute right-2 bottom-2 blur-[26px]" style={info === 'Monitor' ? borderStyleButtomRight : null}></div>
+              <div className="w-[45px] h-[45px] absolute left-2 top-2 rounded-full blur-[26px]" style={info === 'Monitor' ? borderStyleTopLeft : null}></div>
               <div className="w-[50px] h-[50px] z-[2] flex justify-center items-center rounded-xl "
               style={itemBg} >
                 <FiMonitor
@@ -165,13 +153,12 @@ export default function PeripheryCategories({info, handleChangeInfo}) {
           <li
             className="flex items-center gap-1 cursor-pointer z-[999] "
             onClick={() => {
-              handleBorderChange()
-              handleChangeInfo('')
+              handleChangeInfo('Mouse')
             }}
             >
             <div className="w-[90px] h-[90px] flex justify-center items-center relative">
-              <div className="w-[45px] h-[45px] rounded-full absolute right-2 bottom-2 blur-[26px]" style={active ? borderStyleButtomRight : null}></div>
-              <div className="w-[45px] h-[45px] absolute left-2 top-2 rounded-full blur-[26px]" style={active ? borderStyleTopLeft : null}></div>
+              <div className="w-[45px] h-[45px] rounded-full absolute right-2 bottom-2 blur-[26px]" style={info === 'Mouse' ? borderStyleButtomRight : null}></div>
+              <div className="w-[45px] h-[45px] absolute left-2 top-2 rounded-full blur-[26px]" style={info === 'Mouse' ? borderStyleTopLeft : null}></div>
               <div className="w-[50px] h-[50px] z-[2] flex justify-center items-center rounded-xl "
               style={itemBg} >
                 <BsMouse
@@ -186,13 +173,12 @@ export default function PeripheryCategories({info, handleChangeInfo}) {
           <li
             className="flex items-center gap-1 cursor-pointer z-[999] "
             onClick={() => {
-              handleBorderChange()
-              handleChangeInfo('')
+              handleChangeInfo('AudioSpeaker')
             }}
             >
             <div className="w-[90px] h-[90px] flex justify-center items-center relative">
-              <div className="w-[45px] h-[45px] rounded-full absolute right-2 bottom-2 blur-[26px]" style={active ? borderStyleButtomRight : null}></div>
-              <div className="w-[45px] h-[45px] absolute left-2 top-2 rounded-full blur-[26px]" style={active ? borderStyleTopLeft : null}></div>
+              <div className="w-[45px] h-[45px] rounded-full absolute right-2 bottom-2 blur-[26px]" style={info === 'AudioSpeaker' ? borderStyleButtomRight : null}></div>
+              <div className="w-[45px] h-[45px] absolute left-2 top-2 rounded-full blur-[26px]" style={info === 'AudioSpeaker' ? borderStyleTopLeft : null}></div>
               <div className="w-[50px] h-[50px] z-[2] flex justify-center items-center rounded-xl "
               style={itemBg} >
                 <RxSpeakerLoud
@@ -207,13 +193,12 @@ export default function PeripheryCategories({info, handleChangeInfo}) {
           <li
             className="flex items-center gap-1 cursor-pointer z-[999] "
             onClick={() => {
-              handleBorderChange()
-              handleChangeInfo('')
+              handleChangeInfo('WebCamera')
             }}
             >
             <div className="w-[90px] h-[90px] flex justify-center items-center relative">
-              <div className="w-[45px] h-[45px] rounded-full absolute right-2 bottom-2 blur-[26px]" style={active ? borderStyleButtomRight : null}></div>
-              <div className="w-[45px] h-[45px] absolute left-2 top-2 rounded-full blur-[26px]" style={active ? borderStyleTopLeft : null}></div>
+              <div className="w-[45px] h-[45px] rounded-full absolute right-2 bottom-2 blur-[26px]" style={info === 'WebCamera' ? borderStyleButtomRight : null}></div>
+              <div className="w-[45px] h-[45px] absolute left-2 top-2 rounded-full blur-[26px]" style={info === 'WebCamera' ? borderStyleTopLeft : null}></div>
               <div className="w-[50px] h-[50px] z-[2] flex justify-center items-center rounded-xl "
               style={itemBg} >
                 <BsWebcam
