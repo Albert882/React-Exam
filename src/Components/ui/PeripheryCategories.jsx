@@ -184,7 +184,7 @@ export default function PeripheryCategories({info, handleChangeInfo}) {
                 <RxSpeakerLoud
                   className="text-white w-[80%] h-[80%] rounded-xl z-[2]"
                 />
-              </div>
+              </div>  
             </div>
               <a className="text-white font-semibold text-sm z-[0]">
                 АУДИО-СИСТЕМЫ
