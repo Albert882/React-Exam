@@ -1,7 +1,8 @@
 import React from 'react'
+import Hero from '../Components/ui/Hero'
 
 export default function Home() {
   return (
-    <div>The Home Page</div>
+    <Hero/>
   )
 }
