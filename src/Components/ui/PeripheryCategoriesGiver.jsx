@@ -1,6 +1,5 @@
 import React from 'react'
 import {AiOutlineDown, AiOutlineUp} from 'react-icons/ai'
-import PeripheryGiveCategoriesRug from '../PeripheryGiveCategories/PeripheryGIveCategoriesRug'
 import PeripheryGiveCategoriesGraphTable from '../PeripheryGiveCategories/PeripheryGiveCategoriesGraphTable'
 import PeripheryGiveCategoriesHeadPhone from '../PeripheryGiveCategories/PeripheryGiveCategoriesHeadPhone'
 import PeripheryGiveCategoriesKeyboard from '../PeripheryGiveCategories/PeripheryGiveCategoriesKeyboard'
@@ -8,6 +7,7 @@ import PeripheryGiveCategoriesMicrophone from '../PeripheryGiveCategories/Periph
 import PeripheryGiveCategoriesMouse from '../PeripheryGiveCategories/PeripheryGiveCategoriesMouse'
 import PeripheryGiveCategoriesAudioSpeaker from '../PeripheryGiveCategories/PeripheryGiveCategoriesAudioSpeaker'
 import PeripheryGiveCategoriesWebcamera from '../PeripheryGiveCategories/PeripheryGiveCategoriesWebCamera'
+import PeripheryGiveCategoriesRug from '../PeripheryGiveCategories/PeripheryGiveCategoriesRug'
 
 
 

@@ -8,7 +8,7 @@
 //     useEffect(() => {
 //         const fetchProducts = async () => {
 //             const res = await axios.get(path)
-//             dispatch({type: "FETCH_SUCCESS", payload: res.data})
+            // dispatch({type: "FETCH_SUCCESS", payload: res.data})
 //         }
 //         fetchProducts()
 //     }, [])

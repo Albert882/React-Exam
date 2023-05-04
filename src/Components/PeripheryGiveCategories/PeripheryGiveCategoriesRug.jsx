@@ -8,7 +8,7 @@ export default function PeripheryGiveCategoriesRug({handleOpenSizeInterface,give
     const uniqueSizes = [...new Set(products?.filter(item => item?.type === "Rug").map(item => item?.size))]
 
   return (
-    <div className='win-h-screen h-auto bg-[#1a223f] flex flex-col gap-10 w-[23%] p-8'>
+    <div className='win-h-screen h-auto bg-[#1a223f] flex flex-col gap-10 w-auto p-8'>
         <div className='w-full min-h-[48px] h-auto bg-[#ec4f7e] rounded-xl flex items-center justify-center text-lg font-semibold text-white'>
             ПЕРИВЕРИЯ
         </div>
@@ -42,7 +42,7 @@ export default function PeripheryGiveCategoriesRug({handleOpenSizeInterface,give
                 {
                     uniqueBrands?.map((item, index) => {
                         return (
-                            <div className='flex gap-3' onClick={() => handleRugSort('Asus')}>
+                            <div className='flex gap-3' onClick={() => handleRugSort('Asus')} key={index}>
                                 <input  type="checkbox" name={item} className='bg-[#0F162F]' id={index} />
                                 <label htmlFor={index} className='text-[#8190ca] font-medium'>{item}</label>
                             </div>
@@ -67,7 +67,7 @@ export default function PeripheryGiveCategoriesRug({handleOpenSizeInterface,give
                 {
                     uniqueSizes?.map((item, index) => {
                         return (
-                            <div className='flex gap-3' onClick={() => handleRugSort('Asus')}>
+                            <div className='flex gap-3' onClick={() => handleRugSort('Asus')} key={index}>
                                 <input  type="checkbox" name={item} className='bg-[#0F162F]' id={index} />
                                 <label htmlFor={index} className='text-[#8190ca] font-medium'>{item}</label>
                             </div>

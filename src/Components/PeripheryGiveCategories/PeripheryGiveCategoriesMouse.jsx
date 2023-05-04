@@ -3,7 +3,7 @@ import {AiOutlineDown, AiOutlineUp} from 'react-icons/ai'
 
 export default function PeripheryGiveCategoriesMouse({handleOpenSizeInterface,giveSize,sortRugsFromBrand,handleRugSort, handleOpenPriceInterface, givePrice, handleOpenBrandInterface, giveBrand}) {
   return (
-    <div className='win-h-screen h-auto bg-[#1a223f] flex flex-col gap-10 w-[23%] p-8'>
+    <div className='min-h-screen h-auto bg-[#1a223f] flex flex-col gap-10 w-auto p-8'>
         <div className='w-full min-h-[48px] h-auto bg-[#ec4f7e] rounded-xl flex items-center justify-center text-lg font-semibold text-white'>
             ПЕРИВЕРИЯ
         </div>

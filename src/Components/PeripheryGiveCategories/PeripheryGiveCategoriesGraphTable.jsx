@@ -1,9 +1,12 @@
 import React from 'react'
 import {AiOutlineDown, AiOutlineUp} from 'react-icons/ai'
+import { products } from '../../dataBase/dataBase';
 
 export default function PeripheryGiveCategoriesGraphTable({handleOpenSizeInterface,giveSize,sortRugsFromBrand,handleRugSort, handleOpenPriceInterface, givePrice, handleOpenBrandInterface, giveBrand}) {
+    const uniqueBrands = [...new Set(products?.filter(item => item?.type === "GraphTable")?.map(item => item?.brand))];
+    const uniqueConectionType = [...new Set(products?.filter(item => item?.type === "GraphTable").map(item => item?.conectiontype))]
   return (
-    <div className='win-h-screen h-auto bg-[#1a223f] flex flex-col gap-10 w-[23%] p-8'>
+    <div className='min-h-screen h-auto bg-[#1a223f] flex flex-col gap-10 w-auto p-8'>
         <div className='w-full min-h-[48px] h-auto bg-[#ec4f7e] rounded-xl flex items-center justify-center text-lg font-semibold text-white'>
             ПЕРИВЕРИЯ
         </div>
@@ -34,18 +37,16 @@ export default function PeripheryGiveCategoriesGraphTable({handleOpenSizeInterfa
                 </button>
             </div>
             <div className='flex justify-center gap-2 flex-col' style={{display: giveBrand ? 'flex' : 'none'}}>
-                <div className='flex gap-3' onClick={() => handleRugSort('Asus')}>
-                    <input  type="checkbox" name="asus" className='bg-[#0F162F]' id="asus" />
-                    <label htmlFor="" className='text-[#8190ca] font-medium'>Hunio</label>
-                </div>
-                <div className='flex gap-3'>
-                    <input  type="checkbox" name="blizzard"  className='bg-[#0F162F]' id="blizzard"/>
-                    <label htmlFor="" className='text-[#8190ca] font-medium'>Wacom</label>
-                </div>
-                <div className='flex gap-3'>
-                    <input  type="checkbox" name="Corsair" className='bg-[#0F162F]' id="Corsair" />
-                    <label htmlFor="" className='text-[#8190ca] font-medium'>Xp-Pen</label>
-                </div>
+            {
+                    uniqueBrands?.map((item, index) => {
+                        return (
+                            <div className='flex gap-3' key={index}>
+                                <input  type="checkbox" name={item} className='bg-[#0F162F]' id={index} />
+                                <label htmlFor={index} className='text-[#8190ca] font-medium'>{item}</label>
+                            </div>
+                        ) 
+                    })
+                }
             </div>
         </div>
 
@@ -61,18 +62,16 @@ export default function PeripheryGiveCategoriesGraphTable({handleOpenSizeInterfa
                 </button>
             </div>
             <div className='flex justify-center gap-2 flex-col' style={{display: giveSize ? 'flex' : 'none'}}>
-                <div className='flex gap-3'>
-                    <input  type="checkbox" name="asus" className='bg-[#0F162F]' id="asus" />
-                    <label htmlFor="" className='text-[#8190ca] font-medium'>Беспровдной</label>
-                </div>
-                <div className='flex gap-3'>
-                    <input  type="checkbox" name="blizzard"  className='bg-[#0F162F]' id="blizzard"/>
-                    <label htmlFor="" className='text-[#8190ca] font-medium'>Проводной</label>
-                </div>
-                <div className='flex gap-3'>
-                    <input  type="checkbox" name="Corsair" className='bg-[#0F162F]' id="Corsair" />
-                    <label htmlFor="" className='text-[#8190ca] font-medium'>Беспровдной\Проводной</label>
-                </div>
+            {
+                    uniqueConectionType?.map((item, index) => {
+                        return (
+                            <div className='flex gap-3' key={index}>
+                                <input  type="checkbox" name={item} className='bg-[#0F162F]' id={index} />
+                                <label htmlFor={index} className='text-[#8190ca] font-medium'>{item}</label>
+                            </div>
+                        ) 
+                    })
+                }
             </div>
         </div>
     </div>

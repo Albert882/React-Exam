@@ -26,7 +26,7 @@ export default function PeripheryItems({
                 handleOpenModal();
               }}
               >
-              <img src={item?.image} className="w-[80px] h-[64px]" alt="" />
+              <img src={item?.image} className={item?.type === "HeadPhone" ? "w-[72px] h-[72px]" : "w-[80px] h-[64px]"} alt="" />
               <span className="text-white py-2 font-medium">{item?.title}</span>
             </div>
             <div className="w-[25%] h-full flex justify-end flex-col">
