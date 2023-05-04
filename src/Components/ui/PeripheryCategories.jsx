@@ -21,7 +21,7 @@ export default function PeripheryCategories({info, handleChangeInfo}) {
   }
 
   return (
-    <div className="h-full w-auto bg-[#1a223f] flex flex-col gap-8 p-5">
+    <div className="h-auto min-h-screen w-[20%] border-r border-[#34406a] bg-[#1a223f] flex flex-col gap-8 p-5">
         <NavLink to="/" className="text-2xl text-white uppercase font-medium">
           <img
             src="https://lightflightpc.ru/build/assets/logo-light.7c2bd46f.webp"
@@ -128,26 +128,6 @@ export default function PeripheryCategories({info, handleChangeInfo}) {
             </div>
               <a className="text-white font-semibold text-sm z-[0]">
                 МИКРОФОНЫ
-              </a>
-          </li>
-          <li
-            className="flex items-center gap-1 cursor-pointer z-[999] "
-            onClick={() => {
-              handleChangeInfo('Monitor')
-            }}
-            >
-            <div className="w-[90px] h-[90px] flex justify-center items-center relative">
-              <div className="w-[45px] h-[45px] rounded-full absolute right-2 bottom-2 blur-[26px]" style={info === 'Monitor' ? borderStyleButtomRight : null}></div>
-              <div className="w-[45px] h-[45px] absolute left-2 top-2 rounded-full blur-[26px]" style={info === 'Monitor' ? borderStyleTopLeft : null}></div>
-              <div className="w-[50px] h-[50px] z-[2] flex justify-center items-center rounded-xl "
-              style={itemBg} >
-                <FiMonitor
-                  className="text-white w-[80%] h-[80%] rounded-xl z-[2]"
-                />
-              </div>
-            </div>
-              <a className="text-white font-semibold text-sm z-[0]">
-                МОНИТОРЫ
               </a>
           </li>
           <li
