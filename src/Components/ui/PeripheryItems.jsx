@@ -9,12 +9,11 @@ export default function PeripheryItems({
   handleOpenModal,
 }) {
 
-  const ioo = ''
-
   return (
-    <div className="w-full h-auto p-2">
+    <div className="w-full h-auto">
+      <div className=" rounded-xl w-full p-8">
       {
-      products?.filter(item => item.type === info)?.map((item) => {
+        products?.filter(item => item.type === info)?.map((item) => {
           return (
             <div
             className="w-full bg-[#1a223f] h-[104px] p-[20px] border-b border-gray-500 flex"
@@ -48,7 +47,8 @@ export default function PeripheryItems({
           </div>
         )
       })
-      }
+    }
+    </div>
       </div>
       );
 }
