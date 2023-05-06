@@ -6,7 +6,14 @@ import {FaUserFriends} from "react-icons/fa"
 export default function Navbar({handleOpenCartModal}) {
 
     const activeLink = ({isActive}) => ({color: isActive ?  "red" : null})
-    const  [hover,setHover] = useState("")
+    const [compHover,setCompHover] = useState(false)
+    const [helpHover,setHelpHover] = useState(false)
+    function handleHover() {
+        setCompHover(!compHover)
+    }
+    function handleHelpHover () {
+        setHelpHover(!helpHover)
+    }
   return (
     <header className='w-[75%] h-[90px] flex justify-center px-24'>
         <nav className='w-full h-full grid-cols-3 grid'>
@@ -16,10 +23,10 @@ export default function Navbar({handleOpenCartModal}) {
                 </NavLink>
             </div>
             <ul className='flex items-center justify-center gap-6 font-medium '>
-                <li><NavLink to="/" className='text-white relative' style={activeLink}>КОМПЮТЕРЫ</NavLink>
+                <li onMouseEnter={() => handleHover()} onMouseLeave={() => handleHover()}><NavLink to="/" className='text-white relative' style={activeLink}>КОМПЮТЕРЫ</NavLink>
                     <ul>
                         <li>
-                            <div className='bg-white rounded-2xl p-3 pb-0 z-10 w-[350px] flex flex-col gap-3 items-start h-[235px] absolute' style={{display: 'none'}}>
+                            <div className={compHover ? 'bg-white hover:bg-slate-200 rounded-2xl p-3 pb-0 z-10 w-[350px] flex flex-col gap-3 items-start h-[235px] absolute' : "hidden"}>
                                 <h2 className='text-[#ff2f6d] text-2xl'>Готовые Сборки</h2>
                                 <p className='text-gray-500'> Готовые компьютеры, собранные <br />  профессионалами LightFlight </p>
                                 <img className='w-[200px] h-[200px] absolute -bottom-12' src="https://lightflightpc.ru/build/assets/dropdown-pc-1.583c9bad.svg" alt="" />
@@ -28,7 +35,17 @@ export default function Navbar({handleOpenCartModal}) {
                     </ul>
                 </li>
                 <li><NavLink to="/periphery" className='text-white' style={activeLink}>ПЕРИФЕРИЯ</NavLink></li>
-                <li><NavLink to="/about" className='text-white' style={activeLink}>ПОМОЩЬ</NavLink></li>
+                <li onMouseEnter={() => handleHelpHover()} onMouseLeave={() => handleHelpHover()}><NavLink to="/about" className='text-white' style={activeLink}>ПОМОЩЬ</NavLink>
+                    <ul className='z-20 w-auto h-auto'>
+                    <li>
+                        <div className={helpHover ? 'bg-white hover:bg-slate-200 rounded-2xl p-3 pb-0 z-10 w-[350px] flex flex-col gap-3 items-start h-[235px] absolute' : "hidden"}>
+                        <div>
+                            <div></div>
+                        </div>
+                        </div>
+                    </li>
+                    </ul>
+                </li>
                 <li><NavLink to="/blogs" className='text-white' style={activeLink}>О НАС</NavLink></li>
             </ul>
             <div className='flex items-center justify-end'>
