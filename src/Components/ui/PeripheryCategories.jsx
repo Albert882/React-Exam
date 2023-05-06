@@ -7,7 +7,7 @@ import {RxSpeakerLoud} from 'react-icons/rx'
 import {FiMonitor} from 'react-icons/fi';
 import {BsMouse, BsKeyboard, BsMic, BsWebcam} from 'react-icons/bs'
 
-export default function PeripheryCategories({info, handleChangeInfo}) {
+export default function PeripheryCategories({info, handleChangeInfo,clearBrandsList}) {
   const borderStyleButtomRight = {
     background: 'rgb(236,79,126)',
   };
@@ -33,7 +33,8 @@ export default function PeripheryCategories({info, handleChangeInfo}) {
           <li
             className="flex items-center gap-1 cursor-pointer z-[999] "
             onClick={() => {
-              handleChangeInfo('Rug')
+              handleChangeInfo('Rug'),
+              clearBrandsList
             }}
             >
             <div className="w-[90px] h-[90px] flex justify-center items-center relative">
@@ -54,6 +55,7 @@ export default function PeripheryCategories({info, handleChangeInfo}) {
             className="flex items-center gap-1 cursor-pointer z-[999] "
             onClick={() => {
               handleChangeInfo('GraphTable')
+              clearBrandsList
             }}
             >
             <div className="w-[90px] h-[90px] flex justify-center items-center relative">
@@ -74,6 +76,7 @@ export default function PeripheryCategories({info, handleChangeInfo}) {
             className="flex items-center gap-1 cursor-pointer z-[999] "
             onClick={() => {
               handleChangeInfo('HeadPhone')
+              clearBrandsList
             }}
             >
             <div className="w-[90px] h-[90px] flex justify-center items-center relative">
@@ -94,6 +97,7 @@ export default function PeripheryCategories({info, handleChangeInfo}) {
             className="flex items-center gap-1 cursor-pointer z-[999] "
             onClick={() => {
               handleChangeInfo('Keyboard')
+              clearBrandsList
             }}
             >
             <div className="w-[90px] h-[90px] flex justify-center items-center relative">
@@ -114,6 +118,7 @@ export default function PeripheryCategories({info, handleChangeInfo}) {
             className="flex items-center gap-1 cursor-pointer z-[999] "
             onClick={() => {
               handleChangeInfo('Microphone')
+              clearBrandsList
             }}
             >
             <div className="w-[90px] h-[90px] flex justify-center items-center relative">
@@ -134,6 +139,7 @@ export default function PeripheryCategories({info, handleChangeInfo}) {
             className="flex items-center gap-1 cursor-pointer z-[999] "
             onClick={() => {
               handleChangeInfo('Mouse')
+              clearBrandsList
             }}
             >
             <div className="w-[90px] h-[90px] flex justify-center items-center relative">
@@ -154,6 +160,7 @@ export default function PeripheryCategories({info, handleChangeInfo}) {
             className="flex items-center gap-1 cursor-pointer z-[999] "
             onClick={() => {
               handleChangeInfo('AudioSpeaker')
+              clearBrandsList
             }}
             >
             <div className="w-[90px] h-[90px] flex justify-center items-center relative">
@@ -174,6 +181,7 @@ export default function PeripheryCategories({info, handleChangeInfo}) {
             className="flex items-center gap-1 cursor-pointer z-[999] "
             onClick={() => {
               handleChangeInfo('WebCamera')
+              clearBrandsList
             }}
             >
             <div className="w-[90px] h-[90px] flex justify-center items-center relative">

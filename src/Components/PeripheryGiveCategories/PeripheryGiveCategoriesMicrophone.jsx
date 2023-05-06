@@ -1,9 +1,12 @@
 import React from 'react'
 import {AiOutlineDown, AiOutlineUp} from 'react-icons/ai'
 
-export default function PeripheryGiveCategoriesMicrophone({handleOpenSizeInterface,giveSize,sortRugsFromBrand,handleRugSort, handleOpenPriceInterface, givePrice, handleOpenBrandInterface, giveBrand}) {
+export default function PeripheryGiveCategoriesMicrophone({handleOpenSizeInterface,giveSize,sortRugsFromBrand,handleRugSort, handleOpenPriceInterface, givePrice, handleOpenBrandInterface, giveBrand, handleBrandsChange, uniqueFuncBrands}) {
+
+    const uniqueBrands = uniqueFuncBrands("Microphone")
+
   return (
-    <div className='win-h-screen h-auto bg-[#1a223f] flex flex-col gap-10 w-[23%] p-8'>
+    <div className='win-h-screen h-auto bg-[#1a223f] flex flex-col gap-10 w-auto p-8'>
         <div className='w-full min-h-[48px] h-auto bg-[#ec4f7e] rounded-xl flex items-center justify-center text-lg font-semibold text-white'>
             ПЕРИВЕРИЯ
         </div>
@@ -34,45 +37,16 @@ export default function PeripheryGiveCategoriesMicrophone({handleOpenSizeInterfa
                 </button>
             </div>
             <div className='flex justify-center gap-2 flex-col' style={{display: giveBrand ? 'flex' : 'none'}}>
-                <div className='flex gap-3' onClick={() => handleRugSort('Asus')}>
-                    <input  type="checkbox" name="asus" className='bg-[#0F162F]' id="asus" />
-                    <label htmlFor="" className='text-[#8190ca] font-medium'>Boya</label>
-                </div>
-                <div className='flex gap-3'>
-                    <input  type="checkbox" name="blizzard"  className='bg-[#0F162F]' id="blizzard"/>
-                    <label htmlFor="" className='text-[#8190ca] font-medium'>Trust</label>
-                </div>
-                <div className='flex gap-3'>
-                    <input  type="checkbox" name="HyperX" className='bg-[#0F162F]' id="HyperX" />
-                    <label htmlFor="" className='text-[#8190ca] font-medium'>HyperX</label>
-                </div>
-                <div className='flex gap-3'>
-                    <input  type="checkbox" name="Logitech" className='bg-[#0F162F]' id="Logitech" />
-                    <label htmlFor="" className='text-[#8190ca] font-medium'>AverMedia</label>
-                </div>
-                <div className='flex gap-3'>
-                    <input  type="checkbox" name="Razer" className='bg-[#0F162F]' id="Razer" />
-                    <label htmlFor="" className='text-[#8190ca] font-medium'>Razer</label>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div className='w-full min-h-[64px] h-auto gap-5 bg-[#1d2645] rounded-xl flex flex-col p-5'>
-            <div className='flex justify-between'>
-                <span className='text-white text-lg font-medium'>Тип Подключения</span>
-                <button onClick={handleOpenSizeInterface} className='bg-[#263159] w-7 h-7 flex items-center justify-center rounded-lg'>
-                    {
-                        giveBrand ? <AiOutlineUp className='text-[#8190ca]'/> :<AiOutlineDown className='text-[#8190ca]'/> 
-                    }
-                </button>
-            </div>
-            <div className='flex justify-center gap-2 flex-col' style={{display: giveSize ? 'flex' : 'none'}}>
-                <div className='flex gap-3'>
-                    <input  type="checkbox" name="blizzard"  className='bg-[#0F162F]' id="blizzard"/>
-                    <label htmlFor="" className='text-[#8190ca] font-medium'>Проводной</label>
-                </div>
+            {
+                    uniqueBrands?.map((item, index) => {
+                        return (
+                            <div className='flex gap-3' key={index}>
+                                <input  type="checkbox" value={item} onChange={handleBrandsChange} className='bg-[#0F162F]' id={index} />
+                                <label htmlFor={index} className='text-[#8190ca] font-medium'>{item}</label>
+                            </div>
+                        ) 
+                    })
+                }
             </div>
         </div>
     </div>

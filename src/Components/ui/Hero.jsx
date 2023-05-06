@@ -23,6 +23,7 @@ export default function Hero() {
     setMoveSlider(true)
   }
 
+
   return (
     <section className="w-full h-screen flex justify-center items-center mt-20">
       <div className="w-[65%] h-full ">

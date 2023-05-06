@@ -1,9 +1,12 @@
 import React from 'react'
 import {AiOutlineDown, AiOutlineUp} from 'react-icons/ai'
 
-export default function PeripheryGiveCategoriesAudioSpeaker({handleOpenSizeInterface,giveSize,sortRugsFromBrand,handleRugSort, handleOpenPriceInterface, givePrice, handleOpenBrandInterface, giveBrand}) {
+export default function PeripheryGiveCategoriesAudioSpeaker({handleOpenSizeInterface,giveSize,sortRugsFromBrand,handleRugSort, handleOpenPriceInterface, givePrice, handleOpenBrandInterface, giveBrand, uniqueFuncBrands, handleBrandsChange}) {
+
+    const uniqueBrands = uniqueFuncBrands('AudioSpeaker')
+
   return (
-    <div className='win-h-screen h-auto bg-[#1a223f] flex flex-col gap-10 w-[23%] p-8'>
+    <div className='win-h-screen h-auto bg-[#1a223f] flex flex-col gap-10 w-auto p-8'>
         <div className='w-full min-h-[48px] h-auto bg-[#ec4f7e] rounded-xl flex items-center justify-center text-lg font-semibold text-white'>
             ПЕРИВЕРИЯ
         </div>
@@ -34,22 +37,16 @@ export default function PeripheryGiveCategoriesAudioSpeaker({handleOpenSizeInter
                 </button>
             </div>
             <div className='flex justify-center gap-2 flex-col' style={{display: giveBrand ? 'flex' : 'none'}}>
-                <div className='flex gap-3' onClick={() => handleRugSort('Asus')}>
-                    <input  type="checkbox" name="asus" className='bg-[#0F162F]' id="asus" />
-                    <label htmlFor="" className='text-[#8190ca] font-medium'>Sven</label>
-                </div>
-                <div className='flex gap-3'>
-                    <input  type="checkbox" name="blizzard"  className='bg-[#0F162F]' id="blizzard"/>
-                    <label htmlFor="" className='text-[#8190ca] font-medium'>Edifier</label>
-                </div>
-                <div className='flex gap-3'>
-                    <input  type="checkbox" name="Corsair" className='bg-[#0F162F]' id="Corsair" />
-                    <label htmlFor="" className='text-[#8190ca] font-medium'>Ginzzu</label>
-                </div>
-                <div className='flex gap-3'>
-                    <input  type="checkbox" name="Razer" className='bg-[#0F162F]' id="Razer" />
-                    <label htmlFor="" className='text-[#8190ca] font-medium'>Razer</label>
-                </div>
+            {
+                    uniqueBrands?.map((item, index) => {
+                        return (
+                            <div className='flex gap-3' key={index}>
+                                <input  type="checkbox" value={item} onChange={handleBrandsChange} className='bg-[#0F162F]' id={index} />
+                                <label htmlFor={index} className='text-[#8190ca] font-medium'>{item}</label>
+                            </div>
+                        ) 
+                    })
+                }
             </div>
         </div>
     </div>

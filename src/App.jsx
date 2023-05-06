@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { products } from './dataBase/dataBase'
 import { v4 as uuidv4 } from 'uuid';
 import Home from './pages/Home';
@@ -11,14 +11,17 @@ import Layout from './layout/Layout';
 
 function App() {
 
+  const [modalCart, setModalCart] = useState(false)
+  const handleOpenCartModal = () => {
+    setModalCart(!modalCart)
+  }
 
-  console.log(products);
   return (
       <div className='h-screen flex items-center flex-col ' style={{background: 'rgb(25,28,54)  linear-gradient(90deg, rgba(25,28,54,1) 0%, rgba(90,144,154,1) 50%, rgba(36,74,101,1) 100%)'
       }}>
         <Routes>
-          <Route element={<Layout/>}>
-            <Route path='/' element={ <Home/> }/>
+          <Route element={<Layout handleOpenCartModal={handleOpenCartModal}/>}>
+            <Route path='/' element={ <Home handleOpenCartModal={handleOpenCartModal} modalCart={modalCart}/> }/>
             <Route path='/about' element={ <About/> }/>
             <Route path='/blogs' element={ <Blogs/> }/>
           </Route>
