@@ -1,27 +1,90 @@
-import React from 'react'
-import {RiEmotionSadLine} from "react-icons/ri"
-import {CiShoppingBasket} from "react-icons/ci"
+import React, { useEffect } from "react";
+import { RiEmotionSadLine } from "react-icons/ri";
+import { CiShoppingBasket } from "react-icons/ci";
+import { MdOutlineDelete } from "react-icons/md";
+import { useDispatch, useSelector } from "react-redux";
+import { clearCartItems, incrementItemQuantity, removeFromCart } from "../../redux/features/cart-slice";
+import { BiRuble } from "react-icons/all"
 
-export default function Cart({handleOpenCartModal}) {
+export default function Cart({ handleOpenCartModal, modalCart }) {
+  const dispatch = useDispatch();
+  const { cartItems, cartTotal } = useSelector((state) => state.cart);
+
   return (
-    <div className='w-[40%] h-[25vh] mt-8 p-5 text-white bg-[#1a223f] rounded-xl'>
-        <div className='flex items-center h-[30%] justify-between border-b border-[#34406a] pb-5'>
-            <div className='flex items-center'>
-                <CiShoppingBasket className='w-9 h-9'/>
-                <p className=' text-xl font-semibold'>Корзина</p>
-            </div>
-            <div className='w-8 flex items-center justify-center rounded-lg h-8 bg-[#293254]' >
-                <button onClick={handleOpenCartModal}>X</button>
-            </div>
+    <div
+      className="w-[40%] mt-8 p-5 text-white bg-[#1a223f] rounded-xl"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <div className="flex items-center h-[80px] justify-between border-b border-[#34406a] pb-5">
+        <div className="flex items-center">
+          <CiShoppingBasket className="w-9 h-9" />
+          <p className=" text-xl font-semibold">Корзина</p>
         </div>
-        <div className='flex flex-col justify-center items-center h-[70%]'>
-            <div>
-                <RiEmotionSadLine className=' w-20 h-20 text-[#3f4b7a]'/>
-            </div>
-            <div>
-                <p className=' text-lg font-semibold '>Корзина Пуста</p>
-            </div>
+        <div className="w-8 flex items-center justify-center rounded-lg h-8 bg-[#293254]">
+          <button onClick={handleOpenCartModal}>X</button>
         </div>
+      </div>
+      <div className="flex flex-col items-start h-[200px] py-4 px-2 gap-4 overflow-y-auto border-b border-[#293254] mb-5">
+        {cartItems.length ? (
+          cartItems?.map((item) => {
+            return (
+              <div
+                key={item?.id}
+                className=' w-full h-[80px] grid grid-cols-[1fr_3fr_1fr]'
+              >
+                <div className=" h-full flex items-center">
+                  <img src={item?.image} alt="" />
+                </div>
+                <div className=" flex justify-center flex-col gap-1 pt-1">
+                  <div>
+                    <p className=" text-sm">{item?.title}</p>
+                  </div>
+                  <div className=" flex items-center gap-2 font-medium">
+                    <p>{item?.quantity}</p>
+                    <p>x</p>
+                    <p className="text-[#62DCFF] flex items-center">{item?.price?.toLocaleString()}<BiRuble className="text-white w-5 h-5"/></p>
+                  </div>
+                </div>
+                <div className=" flex justify-end items-center">
+                  <div className=" rounded-md w-7 overflow-hidden bg-[#263159] flex items-center flex-col">
+                    <button className=" w-full border-b py-1 border-[#2F3960] text-xl" onClick={() => dispatch(incrementItemQuantity(item))}>
+                      +
+                    </button>
+                    <button className=" w-full py-1 flex items-center justify-center" onClick={() => dispatch(removeFromCart(item?.id))}>
+                      <MdOutlineDelete className=" text-xl text-red-500"/>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            );
+          })
+        ) : (
+          <div className=" w-full h-full flex flex-col items-center justify-center">
+            <div>
+              <RiEmotionSadLine className=" w-20 h-20 text-[#3f4b7a]" />
+            </div>
+            <div>
+              <p className=" text-lg font-semibold ">Корзина Пуста</p>
+            </div>
+          </div>
+        )}
+        <div>
+        </div>
+      </div>
+          {
+            cartItems.length ? (
+              <div className="flex justify-between">
+                <div className="flex items-center">
+                  <p className="text-white text-lg font-semibold">{cartTotal.toLocaleString()}</p>
+                  <p><BiRuble className="w-5 h-5 text-[#62DCFF]"/></p>
+                </div>
+                <div className="flex items-center cursor-pointer" onClick={() => dispatch(clearCartItems())}>
+                  <div><p className="text-lg font-semibold">Очистить карзину</p></div>
+                  <div><MdOutlineDelete className="w-6 h-6 text-xl text-red-500"/></div>
+                </div>
+              </div>
+            ) : null
+          }
     </div>
-  )
+  );
 }

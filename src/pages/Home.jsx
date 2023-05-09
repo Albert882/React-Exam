@@ -9,9 +9,6 @@ export default function Home({handleOpenCartModal, modalCart}) {
     <>
       <Hero/>
       <Advantages/>
-      {
-        modalCart ? <ModalCart handleOpenCartModal={handleOpenCartModal}/> : null
-      }
     </>
     // <div></div>
   )

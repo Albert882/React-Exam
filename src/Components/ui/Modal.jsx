@@ -3,8 +3,11 @@ import { products } from '../../dataBase/dataBase'
 import { RxCube } from 'react-icons/rx'
 
 export default function Modal({handleOpenModal, modal, infoId, info}) {
+
+    // modal ? document.body.style.overflowY = "hidden" : document.body.style.overflowY = "auto";
+
   return (
-    <div className='w-[100vw] h-[100vh] bg-[rgba(0,0,0,0.9)] z-[1000] fixed flex items-center justify-center gap-8' style={{display: modal ? 'flex' : 'none'}} onClick={handleOpenModal}>
+    <div className='w-[100vw] h-[100vh] bg-[rgba(16,22,48,0.9)] backdrop-blur-md z-[1000] fixed flex items-center justify-center gap-8' style={{display: modal ? 'flex' : 'none'}} onClick={handleOpenModal}>
         {
             products.map((item) => {
                 if (item?.id === infoId) {

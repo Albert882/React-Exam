@@ -1,14 +1,15 @@
 import React from 'react'
 import {AiOutlineDown, AiOutlineUp} from 'react-icons/ai'
+import { products } from '../../dataBase/dataBase'
 
-export default function PeripheryGiveCategoriesHeadPhone({ handleOpenPriceInterface, givePrice, handleOpenBrandInterface, giveBrand, uniqueFuncBrands, handleBrandsChange}) {
+export default function ReadyItemsGiveCategory({handleOpenNucleiInterface, handleOpenPriceInterface, givePrice, giveNuclei, uniqueFuncBrands, handleNucleiChange}) {
 
-    const uniqueBrands = uniqueFuncBrands('HeadPhone')
+    const uniqueNucleis = uniqueFuncBrands('Readybuild')
 
   return (
-    <div className='win-h-screen h-auto bg-[#1a223f] flex flex-col gap-10 w-auto p-8'>
+    <div className='h-auto max-h-[500px] bg-[#1a223f] flex flex-col gap-10 w-[300px] p-8 rounded-xl'>
         <div className='w-full min-h-[48px] h-auto bg-[#ec4f7e] rounded-xl flex items-center justify-center text-lg font-semibold text-white'>
-            ПЕРИВЕРИЯ
+            Готовые Сборки
         </div>
         <div className='w-full min-h-[64px] h-auto gap-5 bg-[#1d2645] rounded-xl flex flex-col p-5'>
             <div className='flex justify-between'>
@@ -29,19 +30,19 @@ export default function PeripheryGiveCategoriesHeadPhone({ handleOpenPriceInterf
 
         <div className='w-full min-h-[64px] h-auto gap-5 bg-[#1d2645] rounded-xl flex flex-col p-5'>
             <div className='flex justify-between'>
-                <span className='text-white text-lg font-medium'>Производитель</span>
-                <button onClick={handleOpenBrandInterface} className='bg-[#263159] w-7 h-7 flex items-center justify-center rounded-lg'>
+                <span className='text-white text-lg font-medium'>Кол-во ядер</span>
+                <button onClick={handleOpenNucleiInterface} className='bg-[#263159] w-7 h-7 flex items-center justify-center rounded-lg'>
                     {
-                        giveBrand ? <AiOutlineUp className='text-[#8190ca]'/> :<AiOutlineDown className='text-[#8190ca]'/> 
+                        giveNuclei ? <AiOutlineUp className='text-[#8190ca]'/> :<AiOutlineDown className='text-[#8190ca]'/> 
                     }
                 </button>
             </div>
-            <div className='flex justify-center gap-2 flex-col' style={{display: giveBrand ? 'flex' : 'none'}}>
+            <div className='flex justify-center gap-2 flex-col' style={{display: giveNuclei ? 'flex' : 'none'}}>
             {
-                    uniqueBrands?.map((item, index) => {
+                    uniqueNucleis?.map((item, index) => {
                         return (
                             <div className='flex gap-3' key={index}>
-                                <input  type="checkbox" value={item} onChange={handleBrandsChange} className='bg-[#0F162F]' id={index} />
+                                <input  type="checkbox" value={item} onChange={handleNucleiChange} className='bg-[#0F162F]' id={index} />
                                 <label htmlFor={index} className='text-[#8190ca] font-medium'>{item}</label>
                             </div>
                         ) 

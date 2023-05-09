@@ -67,11 +67,11 @@ export default function Periphery() {
   }
 
   return (
-    <section className='flex w-full bg-gray-900'>
+    <section className='flex items-start w-full bg-gray-900'>
       <PeripheryCategories info={info} handleChangeInfo={handleChangeInfo} className='flex flex-col w-[20%] h-auto'/>
       <PeripheryCategoriesGiver givePrice={givePrice} info={info} handleOpenPriceInterface={handleOpenPriceInterface} handleOpenBrandInterface={handleOpenBrandInterface} uniqueFuncBrands={uniqueFuncBrands} giveBrand={giveBrand} handleOpenSizeInterface={handleOpenSizeInterface} giveSize={giveSize} brands={brands} setBrands={setBrands} handleBrandsChange={handleBrandsChange} />
       <PeripheryItems info={info} handleOpenModal={handleOpenModal} handleChangeInfoId={handleChangeInfoId} brands={brands} className='flex flex-col w-[60%]'/>
-      <Cart className="flex w-[30%] p-8"/>
+      <Cart/>
       <Modal modal={modal} handleOpenModal={handleOpenModal} infoId={infoId} info={info}/>
     </section>
   )

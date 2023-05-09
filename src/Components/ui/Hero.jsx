@@ -3,6 +3,7 @@ import { products } from "../../dataBase/dataBase";
 import { BsNutFill } from "react-icons/bs";
 import { BiRuble } from "react-icons/bi";
 import {AiOutlineRight, AiOutlineLeft} from "react-icons/ai"
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   const [infoReadyBulids, setInfoReadyBulids] = useState("NEWBIE");
@@ -25,7 +26,7 @@ export default function Hero() {
 
 
   return (
-    <section className="w-full h-screen flex justify-center items-center mt-20">
+    <section className="w-full h-[60vh] flex justify-center items-center mt-20">
       <div className="w-[65%] h-full ">
         <div className="min-w-[60%] relative w-[60%] h-[500px] rounded-2xl flex flex-col gap-4 bg-[#f0f0f4] p-10">
           <button onClick={handleMoveSliderFalse} className="flex items-center justify-center absolute top-[50%] w-[60px] h-[60px] rounded-[100%] bg-white -left-7"><AiOutlineLeft className="text-3xl"/></button>
@@ -35,7 +36,9 @@ export default function Hero() {
               ГОТОВЫЕ СБОРКИ
             </h2>
             <button className="text-[#34406c] font-bold text-lg flex items-center justify-center gap-5">
-              <p>ВСЕ СБОРКИ</p>
+              <Link to="/readybuilds">
+                <p>ВСЕ СБОРКИ</p>
+              </Link>
               <AiOutlineRight className="text-[#34406c] text-lg"/>
             </button>
           </div>
@@ -153,10 +156,6 @@ export default function Hero() {
               </div>
             </div>
           </div>
-        </div>
-        <div>
-          <div></div>
-          <div></div>
         </div>
       </div>
     </section>
