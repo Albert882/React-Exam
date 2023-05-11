@@ -7,7 +7,7 @@ export default function ReadyItemsGiveCategory({handleOpenNucleiInterface, handl
     const uniqueNucleis = uniqueFuncBrands('Readybuild')
 
   return (
-    <div className='h-auto max-h-[500px] bg-[#1a223f] flex flex-col gap-10 w-[300px] p-8 rounded-xl'>
+    <div className='h-auto max-h-[500px] bg-[#1a223f] lg:flex flex-col gap-10 w-[300px] hidden p-8 rounded-xl'>
         <div className='w-full min-h-[48px] h-auto bg-[#ec4f7e] rounded-xl flex items-center justify-center text-lg font-semibold text-white'>
             Готовые Сборки
         </div>

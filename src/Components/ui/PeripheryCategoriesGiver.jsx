@@ -11,32 +11,32 @@ import PeripheryGiveCategoriesRug from '../PeripheryGiveCategories/PeripheryGive
 
 
 
-export default function PeripheryCategoriesGiver({info, handleOpenSizeInterface,giveSize, handleOpenPriceInterface, givePrice, handleOpenBrandInterface, giveBrand, brands, setBrands, handleBrandsChange,uniqueFuncBrands, uniqueBrands}) {
+export default function PeripheryCategoriesGiver({info, handleOpenSizeInterface,giveSize, handleOpenPriceInterface, givePrice, handleOpenBrandInterface, giveBrand, brands, setBrands, handleBrandsChange,uniqueFuncBrands, uniqueBrands, handleChangeMinPrice, handleChangeMaxPrice}) {
   return (
     <>
         {
-            info === 'Rug' && <PeripheryGiveCategoriesRug handleOpenSizeInterface={handleOpenSizeInterface} giveSize={giveSize} handleOpenPriceInterface={handleOpenPriceInterface} givePrice={givePrice} handleOpenBrandInterface={handleOpenBrandInterface} giveBrand={giveBrand} brands={brands} uniqueBrands={uniqueBrands} setBrands={setBrands} handleBrandsChange={handleBrandsChange} uniqueFuncBrands={uniqueFuncBrands} />
+            info === 'Rug' && <PeripheryGiveCategoriesRug handleOpenSizeInterface={handleOpenSizeInterface} giveSize={giveSize} handleOpenPriceInterface={handleOpenPriceInterface} givePrice={givePrice} handleOpenBrandInterface={handleOpenBrandInterface} giveBrand={giveBrand} brands={brands} uniqueBrands={uniqueBrands} setBrands={setBrands} handleBrandsChange={handleBrandsChange} uniqueFuncBrands={uniqueFuncBrands} handleChangeMinPrice={handleChangeMinPrice} handleChangeMaxPrice={handleChangeMaxPrice} />
         }
         {
-            info === 'GraphTable' && <PeripheryGiveCategoriesGraphTable handleOpenSizeInterface={handleOpenSizeInterface} giveSize={giveSize} handleOpenPriceInterface={handleOpenPriceInterface} givePrice={givePrice} handleOpenBrandInterface={handleOpenBrandInterface} giveBrand={giveBrand} handleBrandsChange={handleBrandsChange} uniqueFuncBrands={uniqueFuncBrands}/>
+            info === 'GraphTable' && <PeripheryGiveCategoriesGraphTable handleOpenSizeInterface={handleOpenSizeInterface} giveSize={giveSize} handleOpenPriceInterface={handleOpenPriceInterface} givePrice={givePrice} handleOpenBrandInterface={handleOpenBrandInterface} giveBrand={giveBrand} handleBrandsChange={handleBrandsChange} uniqueFuncBrands={uniqueFuncBrands} handleChangeMinPrice={handleChangeMinPrice} handleChangeMaxPrice={handleChangeMaxPrice}/>
         }
         {
-            info === 'HeadPhone' && <PeripheryGiveCategoriesHeadPhone handleOpenSizeInterface={handleOpenSizeInterface} giveSize={giveSize} handleOpenPriceInterface={handleOpenPriceInterface} givePrice={givePrice} handleOpenBrandInterface={handleOpenBrandInterface} giveBrand={giveBrand} handleBrandsChange={handleBrandsChange} uniqueFuncBrands={uniqueFuncBrands}/>
+            info === 'HeadPhone' && <PeripheryGiveCategoriesHeadPhone handleOpenSizeInterface={handleOpenSizeInterface} giveSize={giveSize} handleOpenPriceInterface={handleOpenPriceInterface} givePrice={givePrice} handleOpenBrandInterface={handleOpenBrandInterface} giveBrand={giveBrand} handleBrandsChange={handleBrandsChange} uniqueFuncBrands={uniqueFuncBrands} handleChangeMinPrice={handleChangeMinPrice} handleChangeMaxPrice={handleChangeMaxPrice}/>
         }
         {
-            info === 'Keyboard' && <PeripheryGiveCategoriesKeyboard handleOpenSizeInterface={handleOpenSizeInterface} giveSize={giveSize} handleOpenPriceInterface={handleOpenPriceInterface} givePrice={givePrice} handleOpenBrandInterface={handleOpenBrandInterface} giveBrand={giveBrand} handleBrandsChange={handleBrandsChange} uniqueFuncBrands={uniqueFuncBrands}/>
+            info === 'Keyboard' && <PeripheryGiveCategoriesKeyboard handleOpenSizeInterface={handleOpenSizeInterface} giveSize={giveSize} handleOpenPriceInterface={handleOpenPriceInterface} givePrice={givePrice} handleOpenBrandInterface={handleOpenBrandInterface} giveBrand={giveBrand} handleBrandsChange={handleBrandsChange} uniqueFuncBrands={uniqueFuncBrands} handleChangeMinPrice={handleChangeMinPrice} handleChangeMaxPrice={handleChangeMaxPrice}/>
         }
         {
-            info === 'Microphone' && <PeripheryGiveCategoriesMicrophone handleOpenSizeInterface={handleOpenSizeInterface} giveSize={giveSize} handleOpenPriceInterface={handleOpenPriceInterface} givePrice={givePrice} handleOpenBrandInterface={handleOpenBrandInterface} giveBrand={giveBrand} handleBrandsChange={handleBrandsChange} uniqueFuncBrands={uniqueFuncBrands}/>
+            info === 'Microphone' && <PeripheryGiveCategoriesMicrophone handleOpenSizeInterface={handleOpenSizeInterface} giveSize={giveSize} handleOpenPriceInterface={handleOpenPriceInterface} givePrice={givePrice} handleOpenBrandInterface={handleOpenBrandInterface} giveBrand={giveBrand} handleBrandsChange={handleBrandsChange} uniqueFuncBrands={uniqueFuncBrands} handleChangeMinPrice={handleChangeMinPrice} handleChangeMaxPrice={handleChangeMaxPrice}/>
         }
         {
-            info === 'Mouse' && <PeripheryGiveCategoriesMouse handleOpenSizeInterface={handleOpenSizeInterface} giveSize={giveSize} handleOpenPriceInterface={handleOpenPriceInterface} givePrice={givePrice} handleOpenBrandInterface={handleOpenBrandInterface} giveBrand={giveBrand} handleBrandsChange={handleBrandsChange} uniqueFuncBrands={uniqueFuncBrands}/>
+            info === 'Mouse' && <PeripheryGiveCategoriesMouse handleOpenSizeInterface={handleOpenSizeInterface} giveSize={giveSize} handleOpenPriceInterface={handleOpenPriceInterface} givePrice={givePrice} handleOpenBrandInterface={handleOpenBrandInterface} giveBrand={giveBrand} handleBrandsChange={handleBrandsChange} uniqueFuncBrands={uniqueFuncBrands} handleChangeMinPrice={handleChangeMinPrice} handleChangeMaxPrice={handleChangeMaxPrice}/>
         }
         {
             info === 'AudioSpeaker' && <PeripheryGiveCategoriesAudioSpeaker handleOpenSizeInterface={handleOpenSizeInterface} giveSize={giveSize} handleOpenPriceInterface={handleOpenPriceInterface} givePrice={givePrice} handleOpenBrandInterface={handleOpenBrandInterface} giveBrand={giveBrand} handleBrandsChange={handleBrandsChange} uniqueFuncBrands={uniqueFuncBrands}/>
         }
         {
-            info === 'WebCamera' && <PeripheryGiveCategoriesWebcamera handleOpenSizeInterface={handleOpenSizeInterface} giveSize={giveSize} handleOpenPriceInterface={handleOpenPriceInterface} givePrice={givePrice} handleOpenBrandInterface={handleOpenBrandInterface} giveBrand={giveBrand} handleBrandsChange={handleBrandsChange} uniqueFuncBrands={uniqueFuncBrands}/>
+            info === 'WebCamera' && <PeripheryGiveCategoriesWebcamera handleOpenSizeInterface={handleOpenSizeInterface} giveSize={giveSize} handleOpenPriceInterface={handleOpenPriceInterface} givePrice={givePrice} handleOpenBrandInterface={handleOpenBrandInterface} giveBrand={giveBrand} handleBrandsChange={handleBrandsChange} uniqueFuncBrands={uniqueFuncBrands} handleChangeMinPrice={handleChangeMinPrice} handleChangeMaxPrice={handleChangeMaxPrice}/>
         }
     </>
     )

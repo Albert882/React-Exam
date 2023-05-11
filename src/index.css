@@ -11,3 +11,9 @@
 ::-webkit-scrollbar-thumb {
     background: #1a223f;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

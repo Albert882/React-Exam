@@ -2,12 +2,12 @@ import React from "react";
 
 export default function Advantages() {
   return (
-      <section className="w-full h-[100vh] flex flex-col items-center justify-evenly mt-32">
+      <section className="w-full h-auto flex flex-col items-center justify-evenly mt-32">
         <div>
           <p className="text-white text-2xl font-medium">НАШИ ПРЕИМУЩЕСТВА</p>
         </div>
-        <div className="grid grid-cols-3">
-          <div className="flex flex-col gap-8 items-center border-b border-r border-[#324862] p-4">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-0 gap-12 md:mb-0 mb-16">
+          <div className="flex flex-col gap-8 items-center lg:border-b lg:border-r lg:border-[#324862] p-4">
             <h2 className="text-white text-xl font-semibold">ДЕШЕВЛЕ И КАЧЕСТВЕННЕЕ</h2>
             <p className="w-[400px] text-center text-[#23242F]">
               Создавая наши сборки, мы опирались на самое-самое главное - это
@@ -19,14 +19,14 @@ export default function Advantages() {
               компьютера.
             </p>
           </div>
-          <div className="flex flex-col gap-8 items-center border-b border-r border-[#324862] p-4">
+          <div className="flex flex-col gap-8 items-center lg:border-b lg:border-r lg:border-[#324862] p-4">
             <h2 className="text-white text-xl font-semibold">МАКСИМАЛЬНАЯ КАСТОМИЗАЦИЯ</h2>
             <p className="w-[400px] text-center text-[#23242F]">
               Немаловажным моментом является то, что в нашем магазине Вы можете
               сами выбрать корпус и изменить начинку любого компьютера.
             </p>
           </div>
-          <div className="flex flex-col gap-8 items-center border-b border-[#324862] p-4">
+          <div className="flex flex-col gap-8 items-center lg:border-b lg:border-[#324862] p-4">
             <h2 className="text-white text-xl font-semibold">РАСШИРЕННАЯ ГАРАНТИЯ</h2>
             <p className="w-[400px] text-center text-[#23242F]">
               В течение года мы будем полностью сопровождать Вас и Ваш
@@ -34,7 +34,7 @@ export default function Advantages() {
               ремонт и компенсируем расходы на доставку.
             </p>
           </div>
-          <div className="flex flex-col gap-8 items-center border-r border-[#324862] p-4">
+          <div className="flex flex-col gap-8 items-center lg:border-r lg:border-[#324862] p-4">
             <h2 className="text-white text-xl font-semibold">СБОРКА ПОД КЛЮЧ</h2>
             <p className="w-[400px] text-center text-[#23242F]">
               Душа просит что-то более дорогое и кастомное? Мы поможем и готовы
@@ -45,7 +45,7 @@ export default function Advantages() {
               обсудим Вашу задумку!
             </p>
           </div>
-          <div className="flex flex-col gap-8 items-center border-r border-[#324862] p-4">
+          <div className="flex flex-col gap-8 items-center lg:border-r lg:border-[#324862] p-4">
             <h2 className="text-white text-xl font-semibold">ДОСТАВКА ПО ВСЕЙ РОССИИ</h2>
             <p className="w-[400px] text-center text-[#23242F]">
               Мы отправляем компьютеры в специальных, удароустойчивых ящиках с

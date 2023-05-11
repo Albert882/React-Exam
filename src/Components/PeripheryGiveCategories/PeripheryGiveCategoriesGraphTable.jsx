@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {AiOutlineDown, AiOutlineUp} from 'react-icons/ai'
 import { products } from '../../dataBase/dataBase';
 
-export default function PeripheryGiveCategoriesGraphTable({handleOpenSizeInterface,giveSize,sortRugsFromBrand,handleRugSort, handleOpenPriceInterface, givePrice, handleOpenBrandInterface, handleBrandsChange, giveBrand, uniqueFuncBrands}) {
+export default function PeripheryGiveCategoriesGraphTable({handleOpenSizeInterface,giveSize,sortRugsFromBrand,handleRugSort, handleOpenPriceInterface, givePrice, handleOpenBrandInterface, handleBrandsChange, giveBrand, uniqueFuncBrands,  handleChangeMaxPrice, handleChangeMinPrice}) {
     const uniqueBrands =  uniqueFuncBrands('GraphTable')
 
     const uniqueConectionType = [...new Set(products?.filter(item => item?.type === "GraphTable").map(item => item?.conectiontype))]
@@ -23,9 +23,9 @@ export default function PeripheryGiveCategoriesGraphTable({handleOpenSizeInterfa
                 </button>
             </div>
             <div className='flex items-center justify-center gap-2' style={{display: givePrice ? 'flex' : 'none'}}>
-                <input type="text" placeholder='4100' className=' border-none bg-[#1a223f] h-[39px] rounded-lg p-3 w-[40%]' />
+            <input type="number" placeholder='1700' onChange={handleChangeMinPrice}  className=' border-none text-white outline-none bg-[#1a223f] h-[39px] rounded-lg p-3 w-[40%]' />
                     <div className='w-[30px] h-[3px] bg-[#343a52]'></div>
-                <input type="text" placeholder='38200' className='border-none bg-[#1a223f] h-[39px] rounded-lg p-3 w-[40%]' />
+                <input type="number" placeholder='15600' onChange={handleChangeMaxPrice} className='border-none text-white outline-none bg-[#1a223f] h-[39px] rounded-lg p-3 w-[40%]' />
             </div>
         </div>
 

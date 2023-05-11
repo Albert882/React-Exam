@@ -51,7 +51,7 @@ export default function ReadyBuilds() {
   return (
     <section className='w-full h-auto bg-[#0F162F] flex items-center justify-center'>
       <ReadyBuildsModal infoId={infoId} modal={modal} handleOpenModal={handleOpenModal} />
-      <div className='w-[65%] h-auto flex flex-col justify-center gap-12'>
+      <div className='xl:w-[65%] h-auto flex flex-col justify-center gap-12'>
           <NavReadyBuilds handleChangeReadyBuildInfo={handleChangeReadyBuildInfo}/>
         <div className='w-full flex gap-24'>
           <ReadyBuildsItem readyBuildInfo={readyBuildInfo} nucleis={nucleis} handleOpenModal={handleOpenModal} handleChangeInfoId={handleChangeInfoId}/>

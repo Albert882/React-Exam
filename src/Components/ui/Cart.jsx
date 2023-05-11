@@ -12,7 +12,7 @@ export default function Cart({ handleOpenCartModal, modalCart }) {
 
   return (
     <div
-      className="w-[40%] mt-8 p-5 text-white bg-[#1a223f] rounded-xl"
+      className="w-full mt-8 p-5 text-white bg-[#1a223f] rounded-xl"
       onClick={(e) => e.stopPropagation()}
     >
       <div className="flex items-center h-[80px] justify-between border-b border-[#34406a] pb-5">

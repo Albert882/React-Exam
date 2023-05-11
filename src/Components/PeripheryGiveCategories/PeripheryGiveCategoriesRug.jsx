@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 import {AiOutlineDown, AiOutlineUp} from 'react-icons/ai'
 import { products } from '../../dataBase/dataBase'
 
-export default function PeripheryGiveCategoriesRug({handleOpenSizeInterface,giveSize,handleRugSort, handleOpenPriceInterface, givePrice, handleOpenBrandInterface, giveBrand, handleBrandsChange, uniqueFuncBrands}) {
+export default function PeripheryGiveCategoriesRug({handleOpenSizeInterface,giveSize,handleRugSort, handleOpenPriceInterface, givePrice, handleOpenBrandInterface, giveBrand, handleBrandsChange, uniqueFuncBrands, handleChangeMaxPrice, handleChangeMinPrice}) {
 
     const uniqueSizes = [...new Set(products?.filter(item => item?.type === "Rug").map(item => item?.size))]
 
     const uniqueBrands = uniqueFuncBrands('Rug')
 
   return (
-    <div className='win-h-screen h-auto bg-[#1a223f] flex flex-col gap-10 w-auto p-8'>
+    <div className='win-h-screen h-full bg-[#1a223f] flex flex-col gap-10 w-auto p-8'>
         <div className='w-full min-h-[48px] h-auto bg-[#ec4f7e] rounded-xl flex items-center justify-center text-lg font-semibold text-white'>
             ПЕРИВЕРИЯ
         </div>
@@ -23,9 +23,9 @@ export default function PeripheryGiveCategoriesRug({handleOpenSizeInterface,give
                 </button>
             </div>
             <div className='flex items-center justify-center gap-2' style={{display: givePrice ? 'flex' : 'none'}}>
-                <input type="text" placeholder='1700' className=' border-none bg-[#1a223f] h-[39px] rounded-lg p-3 w-[40%]' />
+            <input type="number" placeholder='1700' onChange={handleChangeMinPrice}  className=' border-none text-white outline-none bg-[#1a223f] h-[39px] rounded-lg p-3 w-[40%]' />
                     <div className='w-[30px] h-[3px] bg-[#343a52]'></div>
-                <input type="text" placeholder='15600' className='border-none bg-[#1a223f] h-[39px] rounded-lg p-3 w-[40%]' />
+                <input type="number" placeholder='15600' onChange={handleChangeMaxPrice} className='border-none text-white outline-none bg-[#1a223f] h-[39px] rounded-lg p-3 w-[40%]' />
             </div>
         </div>
 

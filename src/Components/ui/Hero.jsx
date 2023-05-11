@@ -26,8 +26,8 @@ export default function Hero() {
 
   return (
     <section className="w-full h-[60vh] flex justify-center items-center mt-20">
-      <div className="w-[65%] h-full flex gap-8 ">
-        <div className="min-w-[60%] relative w-[60%] h-[500px] rounded-2xl flex flex-col gap-4 bg-[#f0f0f4] p-10">
+      <div className="w-[65%] h-full flex flex-col xl:flex-row gap-8">
+        <div className="min-w-[60%] relative xl:w-[60%] w-full h-[500px] rounded-2xl flex flex-col gap-4 bg-[#f0f0f4] p-10">
           <button
             onClick={handleMoveSliderFalse}
             className="flex items-center justify-center absolute top-[50%] w-[60px] h-[60px] rounded-[100%] bg-white -left-7"
@@ -170,7 +170,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-3">
+        <div className="xl:flex flex-col gap-3 hidden">
           <div className="flex flex-col">
             <div className="w-[500px] h-[300px] flex flex-col gap-9 rounded-3xl border-2  border-gray-400 border-opacity-75 relative p-8">
               <div>

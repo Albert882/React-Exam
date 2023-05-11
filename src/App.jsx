@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import Home from "./pages/Home";
 import Periphery from "./pages/Periphery";
 import About from "./pages/About";
-import Blogs from "./pages/Blogs";
+import Company from "./pages/Company";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./Components/ui/Navbar";
 import Layout from "./layout/Layout";
@@ -91,7 +91,7 @@ function App() {
             element={<Home handleOpenCartModal={handleOpenCartModal} />}
           />
           <Route path="/about" element={<About />} />
-          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/company" element={<Company/>} />
           <Route path="/readybuilds" element={<ReadyBuilds />} />
         </Route>
         <Route path="/periphery" element={<Periphery />} />

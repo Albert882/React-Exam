@@ -66,12 +66,36 @@ export default function Periphery() {
       checked ? setBrands ((prev) => [...prev, value]) : setBrands(brands.filter(item => item !== value))
   }
 
+
+  const [minPrice, setMinPrice] = useState(0)
+  const [maxPrice, setMaxPrice] = useState(9999999999999)
+
+  const handleChangeMaxPrice = (e) => {
+    setMaxPrice(Number(e.target.value))
+  }
+  const handleChangeMinPrice = (e) => {
+    setMinPrice(Number(e.target.value))
+  }
+
+
+  useEffect(() => {
+    setMinPrice(0)
+    setMaxPrice(9999999999999)
+  }, [info])
+
+  useEffect(() => {
+    maxPrice === 0 && setMaxPrice(9999999999999)
+  }, [maxPrice])
+
+
   return (
     <section className='flex items-start w-full bg-gray-900'>
       <PeripheryCategories info={info} handleChangeInfo={handleChangeInfo} className='flex flex-col w-[20%] h-auto'/>
-      <PeripheryCategoriesGiver givePrice={givePrice} info={info} handleOpenPriceInterface={handleOpenPriceInterface} handleOpenBrandInterface={handleOpenBrandInterface} uniqueFuncBrands={uniqueFuncBrands} giveBrand={giveBrand} handleOpenSizeInterface={handleOpenSizeInterface} giveSize={giveSize} brands={brands} setBrands={setBrands} handleBrandsChange={handleBrandsChange} />
-      <PeripheryItems info={info} handleOpenModal={handleOpenModal} handleChangeInfoId={handleChangeInfoId} brands={brands} className='flex flex-col w-[60%]'/>
-      <Cart/>
+      <PeripheryCategoriesGiver givePrice={givePrice} info={info} handleChangeMinPrice={handleChangeMinPrice} handleChangeMaxPrice={handleChangeMaxPrice} handleOpenPriceInterface={handleOpenPriceInterface} handleOpenBrandInterface={handleOpenBrandInterface} uniqueFuncBrands={uniqueFuncBrands} giveBrand={giveBrand} handleOpenSizeInterface={handleOpenSizeInterface} giveSize={giveSize} brands={brands} setBrands={setBrands} handleBrandsChange={handleBrandsChange} />
+      <PeripheryItems minPrice={minPrice} maxPrice={maxPrice} info={info} handleOpenModal={handleOpenModal} handleChangeInfoId={handleChangeInfoId} brands={brands} className='flex flex-col w-[60%]'/>
+      <div className='w-[40%] 2xl:block hidden'>
+      <Cart className=" 2xl:block hidden"/>
+      </div>
       <Modal modal={modal} handleOpenModal={handleOpenModal} infoId={infoId} info={info}/>
     </section>
   )

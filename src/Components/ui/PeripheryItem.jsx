@@ -7,6 +7,8 @@ import {
 } from "../../redux/features/cart-slice";
 import { MdBalance } from "react-icons/md";
 import { MdOutlineDelete } from "react-icons/md";
+import { AiOutlinePlus } from "react-icons/all"
+import { BiRuble } from "react-icons/all"
 
 export default function PeripheryItem({
   item,
@@ -24,11 +26,11 @@ export default function PeripheryItem({
 
   return (
     <div
-      className="w-full bg-[#1a223f] h-[104px] p-[20px] border-b border-[#34406a] flex"
+      className="w-full bg-[#1a223f] h-[104px] p-[20px] border-b border-[#34406a] flex gap-2"
       key={item?.id}
     >
       <div
-        className="w-[75%] h-full flex gap-3 cursor-pointer"
+        className="lg:w-[75%] w-auto h-full flex gap-3 cursor-pointer"
         onClick={() => {
           handleChangeInfoId(item?.id);
           handleOpenModal();
@@ -58,12 +60,12 @@ export default function PeripheryItem({
         {item?.type === "Keyboard" && (
           <img src={item?.image} alt="" className="h-[50px] w-[125px]" />
         )}
-        <span className="text-white py-2 font-medium">{item?.title}</span>
+        <span className="text-white py-2 font-medium hidden lg:block">{item?.title}</span>
       </div>
-      <div className="w-[25%] h-full flex justify-end flex-col">
+      <div className="lg:w-[25%] w-auto h-full flex justify-end flex-col">
         <div className="flex gap-3 items-center">
           <span className="text-white text-base font-medium">
-            {item?.price} $
+            {item?.price} <BiRuble/>
           </span>
           {productIsAdded ? (
             <div className=" flex items-center justify-center gap-2">
@@ -84,16 +86,24 @@ export default function PeripheryItem({
               </button>
             </div>
           ) : (
-            <button
-              className="bg-[#62dcff] font-semibold text-sm text-[#181f39] py-[8px] px-[12px] rounded-md"
-              onClick={() => dispatch(addToCart(item))}
-            >
-              ДОБАВИТЬ
-            </button>
+            <div>
+              <button
+                className="bg-[#62dcff] font-semibold md:block hidden text-sm text-[#181f39] py-[8px] px-[12px] rounded-md"
+                onClick={() => dispatch(addToCart(item))}
+                >
+                ДОБАВИТЬ
+              </button> 
+              <button
+                className="bg-[#62dcff] font-semibold text-sm md:hidden block text-[#181f39] py-[8px] px-[12px] rounded-md"
+                onClick={() => dispatch(addToCart(item))}
+                >
+                <AiOutlinePlus className=" text-lg"/>
+              </button>
+            </div>
           )}
         </div>
         <div>
-          <a href="" className=" flex gap-3 text-[#8190ca]">
+          <a href="" className=" flex gap-3 hidden lg:block text-[#8190ca]">
             <MdBalance className="w-6 h-6" />В Сравнение
           </a>
         </div>

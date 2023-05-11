@@ -1,7 +1,7 @@
 import React from 'react'
 import {AiOutlineDown, AiOutlineUp} from 'react-icons/ai'
 
-export default function PeripheryGiveCategoriesMicrophone({handleOpenSizeInterface,giveSize,sortRugsFromBrand,handleRugSort, handleOpenPriceInterface, givePrice, handleOpenBrandInterface, giveBrand, handleBrandsChange, uniqueFuncBrands}) {
+export default function PeripheryGiveCategoriesMicrophone({handleOpenSizeInterface,giveSize,sortRugsFromBrand,handleRugSort, handleOpenPriceInterface, givePrice, handleOpenBrandInterface, giveBrand, handleBrandsChange, uniqueFuncBrands, handleChangeMaxPrice, handleChangeMinPrice}) {
 
     const uniqueBrands = uniqueFuncBrands("Microphone")
 
@@ -20,9 +20,9 @@ export default function PeripheryGiveCategoriesMicrophone({handleOpenSizeInterfa
                 </button>
             </div>
             <div className='flex items-center justify-center gap-2' style={{display: givePrice ? 'flex' : 'none'}}>
-                <input type="text" placeholder='1700' className=' border-none bg-[#1a223f] h-[39px] rounded-lg p-3 w-[40%]' />
+            <input type="number" placeholder='1700' onChange={handleChangeMinPrice}  className=' border-none text-white outline-none bg-[#1a223f] h-[39px] rounded-lg p-3 w-[40%]' />
                     <div className='w-[30px] h-[3px] bg-[#343a52]'></div>
-                <input type="text" placeholder='15600' className='border-none bg-[#1a223f] h-[39px] rounded-lg p-3 w-[40%]' />
+                <input type="number" placeholder='15600' onChange={handleChangeMaxPrice} className='border-none text-white outline-none bg-[#1a223f] h-[39px] rounded-lg p-3 w-[40%]' />
             </div>
         </div>
 

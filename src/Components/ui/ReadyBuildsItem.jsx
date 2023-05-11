@@ -10,7 +10,7 @@ export default function ReadyBuildsItem({
 }) {
 
   return (
-    <section className="grid grid-cols-4 gap-4 mb-48">
+    <section className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-4 mb-48">
       {products
         ?.filter((item) =>
           readyBuildInfo
@@ -26,7 +26,7 @@ export default function ReadyBuildsItem({
                 handleOpenModal();
               }}
             >
-              <div className="mt-[4px] bg-[#1F2848] w-[200px] gap-5 rounded-[10px] flex items-center flex-col">
+              <div className="mt-[4px] bg-[#1F2848] sm:w-[200px] w-full gap-5 rounded-[10px] flex items-center flex-col">
                 <div className="flex items-center justify-center flex-col border-b border-[#34406c6c] pb-4">
                   <img
                     src={item?.windowimage}
