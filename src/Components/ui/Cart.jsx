@@ -5,14 +5,17 @@ import { MdOutlineDelete } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { clearCartItems, incrementItemQuantity, removeFromCart } from "../../redux/features/cart-slice";
 import { BiRuble } from "react-icons/all"
+import { useLocation } from "react-router-dom";
 
 export default function Cart({ handleOpenCartModal, modalCart }) {
   const dispatch = useDispatch();
   const { cartItems, cartTotal } = useSelector((state) => state.cart);
 
+  const {pathname} = useLocation()
+
   return (
     <div
-      className="w-full mt-8 p-5 text-white bg-[#1a223f] rounded-xl"
+      className={pathname === "/periphery" ? "w-full mt-8 p-5 text-white bg-[#1a223f] rounded-xl" : " w-full lg:w-[40%] mt-8 p-5 text-white bg-[#1a223f] rounded-xl"}
       onClick={(e) => e.stopPropagation()}
     >
       <div className="flex items-center h-[80px] justify-between border-b border-[#34406a] pb-5">
@@ -33,7 +36,33 @@ export default function Cart({ handleOpenCartModal, modalCart }) {
                 className=' w-full h-[80px] grid grid-cols-[1fr_3fr_1fr]'
               >
                 <div className=" h-full flex items-center">
-                  <img src={item?.image} alt="" />
+                    {item?.type === "HeadPhone" && (
+                      <img src={item?.image} className="w-[72px] h-[72px]" alt="" />
+                    )}
+                    {item?.type === "Rug" && (
+                      <img src={item?.image} alt="" className="w-[80px] h-[64px]" />
+                    )}
+                    {item?.type === "GraphTable" && (
+                      <img src={item?.image} alt="" className="w-[80px] h-[64px]" />
+                    )}
+                    {item?.type === "Microphone" && (
+                      <img src={item?.image} alt="" className="w-[40px] h-[64px]" />
+                    )}
+                    {item?.type === "Mouse" && (
+                      <img src={item?.image} alt="" className="w-[45px] h-[60px]" />
+                    )}
+                    {item?.type === "AudioSpeaker" && (
+                      <img src={item?.image} alt="" className="w-[80px] h-[64px]" />
+                    )}
+                    {item?.type === "WebCamera" && (
+                      <img src={item?.image} alt="" className="w-[65px]" />
+                    )}
+                    {item?.type === "Keyboard" && (
+                      <img src={item?.image} alt="" className="h-[50px] w-[125px]" />
+                    )}
+                    {item?.type === "Readybuild" && (
+                      <img src={item?.windowimage} alt="" className="w-[80px]" />
+                    )}
                 </div>
                 <div className=" flex justify-center flex-col gap-1 pt-1">
                   <div>

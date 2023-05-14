@@ -2,16 +2,16 @@ import React from 'react'
 import {AiOutlineDown, AiOutlineUp} from 'react-icons/ai'
 import { products } from '../../dataBase/dataBase'
 
-export default function ReadyItemsGiveCategory({handleOpenNucleiInterface, handleOpenPriceInterface, givePrice, giveNuclei, uniqueFuncBrands, handleNucleiChange}) {
+export default function ReadyItemsGiveCategory({handleOpenNucleiInterface, handleOpenPriceInterface, givePrice, giveNuclei, uniqueFuncBrands, handleNucleiChange, handleChangeMinPrice, handleChangeMaxPrice}) {
 
     const uniqueNucleis = uniqueFuncBrands('Readybuild')
 
   return (
-    <div className='h-auto max-h-[500px] bg-[#1a223f] lg:flex flex-col gap-10 w-[300px] hidden p-8 rounded-xl'>
+    <div className='bg-[#1a223f] h-full lg:flex flex-col gap-10 w-[400px] hidden p-8 rounded-xl'>
         <div className='w-full min-h-[48px] h-auto bg-[#ec4f7e] rounded-xl flex items-center justify-center text-lg font-semibold text-white'>
             Готовые Сборки
         </div>
-        <div className='w-full min-h-[64px] h-auto gap-5 bg-[#1d2645] rounded-xl flex flex-col p-5'>
+        <div className='w-full h-auto gap-5 bg-[#1d2645] rounded-xl flex flex-col p-5'>
             <div className='flex justify-between'>
                 <span className='text-white text-lg font-medium'>Цена</span>
                 <button onClick={handleOpenPriceInterface} className='bg-[#263159] w-7 h-7 flex items-center justify-center rounded-lg'>
@@ -21,14 +21,14 @@ export default function ReadyItemsGiveCategory({handleOpenNucleiInterface, handl
                 </button>
             </div>
             <div className='flex items-center justify-center gap-2' style={{display: givePrice ? 'flex' : 'none'}}>
-                <input type="text" placeholder='3500' className=' border-none bg-[#1a223f] h-[39px] rounded-lg p-3 w-[40%]' />
+            <input type="number" placeholder='3500' onChange={handleChangeMinPrice}  className=' border-none text-white outline-none bg-[#1a223f] h-[39px] rounded-lg p-3 w-[40%]' />
                     <div className='w-[30px] h-[3px] bg-[#343a52]'></div>
-                <input type="text" placeholder='69500' className='border-none bg-[#1a223f] h-[39px] rounded-lg p-3 w-[40%]' />
+                <input type="number" placeholder='69800' onChange={handleChangeMaxPrice} className='border-none text-white outline-none bg-[#1a223f] h-[39px] rounded-lg p-3 w-[40%]' />
             </div>
         </div>
 
 
-        <div className='w-full min-h-[64px] h-auto gap-5 bg-[#1d2645] rounded-xl flex flex-col p-5'>
+        <div className='w-full h-auto gap-5 bg-[#1d2645] rounded-xl flex flex-col p-5'>
             <div className='flex justify-between'>
                 <span className='text-white text-lg font-medium'>Кол-во ядер</span>
                 <button onClick={handleOpenNucleiInterface} className='bg-[#263159] w-7 h-7 flex items-center justify-center rounded-lg'>

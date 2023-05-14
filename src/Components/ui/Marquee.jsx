@@ -2,12 +2,13 @@ import React from 'react'
 
 export default function Marquee() {
   return (
-    <div className='flex items-center flex-col h-[52vh] w-full bg-[]'>
-      <h2 className='text-white text-2xl mb-16'>РАБОТАЕМ С ЛИДЕРАМИ МНЕНИЙ</h2>
-      <div className=' h-[73%] flex relative blur-sm'>
-          <img src="https://lightflightpc.ru/build/assets/leaders-sprite.c266e45b.png" className='absolute left-2 top-3' alt="" />
-          <img src="https://lightflightpc.ru/build/assets/leaders-sprite.c266e45b.png" alt="" />
+    <section className='w-full flex flex-col gap-8 justify-center items-center bg-[#151C36] h-[202px] border-b border-[#34406c] md:h-[404px] bg-50% p-10 bg-[url("https://lightflightpc.ru/build/assets/backdrop.d70523f7.png")] mt-10'>
+      <div className='text-white text-xl md:text-3xl font-semibold'>
+        <p>НАШИ ПАРТНЁРЫ</p>
       </div>
-    </div>
+      <div>
+        <img src="https://lightflightpc.ru/build/assets/partners-sprite.9473356f.png" alt="" />
+      </div>
+    </section>
   )
 }

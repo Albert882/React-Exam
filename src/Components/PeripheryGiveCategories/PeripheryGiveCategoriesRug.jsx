@@ -9,7 +9,7 @@ export default function PeripheryGiveCategoriesRug({handleOpenSizeInterface,give
     const uniqueBrands = uniqueFuncBrands('Rug')
 
   return (
-    <div className='win-h-screen h-full bg-[#1a223f] flex flex-col gap-10 w-auto p-8'>
+    <div className='win-h-screen h-full bg-[#1a223f] hidden xl:flex flex-col gap-10 w-auto p-8'>
         <div className='w-full min-h-[48px] h-auto bg-[#ec4f7e] rounded-xl flex items-center justify-center text-lg font-semibold text-white'>
             ПЕРИВЕРИЯ
         </div>

@@ -49,8 +49,6 @@ export default function Periphery() {
     setBrands([])
   }, [info])
 
-  console.log(brands);
-
   const uniqueFuncBrands = (elem) => {
     return [...new Set(products?.filter(item => item?.type === elem).map(item => item?.brand))]
   }

@@ -2,8 +2,14 @@ import React from "react";
 import { RxCube } from "react-icons/rx";
 import { products } from "../../dataBase/dataBase";
 import { BsCheckLg } from "react-icons/bs";
+import { BiRuble } from "react-icons/bi";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, removeFromCart } from "../../redux/features/cart-slice";
 
 export default function ReadyBuildsModal({ infoId, handleOpenModal, modal }) {
+  const dispatch = useDispatch();
+  const { cartItems } = useSelector((state) => state.cart);
+
   return (
     <div
       className="w-full h-full bg-[rgba(16,22,48,0.9)] backdrop-blur-md z-[1000] top-0 fixed flex items-center justify-center gap-8"
@@ -14,7 +20,7 @@ export default function ReadyBuildsModal({ infoId, handleOpenModal, modal }) {
         if (item?.id === infoId) {
           return (
             <div
-              className="w-[45%] h-full bg-[#293254] p-4 rounded-xl "
+              className="lg:w-[45%] md:w-[80%] w-full h-full bg-[#293254] p-4 rounded-xl "
               onClick={(e) => e.stopPropagation()}
               key={infoId}
             >
@@ -36,8 +42,8 @@ export default function ReadyBuildsModal({ infoId, handleOpenModal, modal }) {
                   <p className="text-white font-semibold text-base">
                     {item?.title}
                   </p>
-                  <p className="text-white font-semibold text-base">
-                    {item?.price} $
+                  <p className="text-white font-semibold text-base flex items-center">
+                    {item?.price} <BiRuble className="text-white w-5 h-5" />
                   </p>
                 </div>
                 <div className=" w-auto bg-[#34406a] rounded-xl h-[320px] overflow-auto bg-scroll">
@@ -110,6 +116,23 @@ export default function ReadyBuildsModal({ infoId, handleOpenModal, modal }) {
                     {item?.description6}
                   </p>
                 </div>
+              </div>
+              <div className="w-full flex justify-center h-auto">
+                {cartItems?.find((addedItem) => addedItem?.id === item?.id) ? (
+                  <button
+                    className="w-[260px] py-3 px-10 bg-[#EC4F7E] text-[#181F39] uppercase font-semibold rounded-md"
+                    onClick={() => dispatch(removeFromCart(item?.id))}
+                  >
+                    Убрать с Корзины
+                  </button>
+                ) : (
+                  <button
+                    className=" w-[260px] py-3 px-10 bg-[#62DCFF] text-[#181F39] uppercase font-semibold rounded-md"
+                    onClick={() => dispatch(addToCart(item))}
+                  >
+                    Добавить в Корзину
+                  </button>
+                )}
               </div>
             </div>
           );

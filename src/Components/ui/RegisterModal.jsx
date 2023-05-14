@@ -11,6 +11,9 @@ export default function RegisterModal({
   handleShowRegister,
   handleCloseRegisterModal
 }) {
+
+
+  
   return (
     <div
       className="w-[100vw] h-[100vh] bg-[rgba(16,22,48,0.9)] backdrop-blur-md z-[1000] fixed flex items-center justify-center gap-8"

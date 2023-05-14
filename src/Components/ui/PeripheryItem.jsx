@@ -15,6 +15,8 @@ export default function PeripheryItem({
   handleOpenModal,
   handleChangeInfoId,
 }) {
+
+
   const dispatch = useDispatch();
   const { cartItems } = useSelector((state) => state.cart);
   const productIsAdded = cartItems?.find(
@@ -30,7 +32,7 @@ export default function PeripheryItem({
       key={item?.id}
     >
       <div
-        className="lg:w-[75%] w-auto h-full flex gap-3 cursor-pointer"
+        className="w-[75%] h-full flex gap-3 cursor-pointer"
         onClick={() => {
           handleChangeInfoId(item?.id);
           handleOpenModal();
@@ -60,17 +62,20 @@ export default function PeripheryItem({
         {item?.type === "Keyboard" && (
           <img src={item?.image} alt="" className="h-[50px] w-[125px]" />
         )}
-        <span className="text-white py-2 font-medium hidden lg:block">{item?.title}</span>
+        <span className="text-white py-2 font-medium hidden sm:block">{item?.title}</span>
       </div>
-      <div className="lg:w-[25%] w-auto h-full flex justify-end flex-col">
-        <div className="flex gap-3 items-center">
-          <span className="text-white text-base font-medium">
-            {item?.price} <BiRuble/>
-          </span>
+      <div className="w-auto h-full flex justify-end items-center flex-col">
+        <div className="flex osm:flex-row flex-col gap-3 items-center">
+          <div className="flex items-center justify-center osm:mb-0 mb-[-10px]">
+            <p className="text-white w-auto text-base font-medium">
+              {item?.price} 
+            </p>
+            <BiRuble className="text-white font-medium w-5 h-5"/>
+          </div>
           {productIsAdded ? (
             <div className=" flex items-center justify-center gap-2">
               <button
-                className=" w-8 h-8 bg-[#263159] rounded-md text-white font-semibold flex items-center justify-center"
+                className=" w-8 h-8 bg-[#263159] hidden vsm:flex rounded-md text-white font-semibold items-center justify-center"
                 onClick={handleDecrementItem}
               >
                 <MdOutlineDelete className="text-red-500 w-5 h-5"/>
@@ -79,11 +84,19 @@ export default function PeripheryItem({
                 {productIsAdded?.quantity}x
               </p>
               <button
-                className=" w-8 h-8 bg-[#263159] text-white rounded-md font-semibold flex items-center justify-center"
+                className=" w-8 h-8 bg-[#263159] text-white rounded-md font-semibold hidden vsm:flex items-center justify-center"
                 onClick={handleIncrementItem}
               >
                 +
               </button>
+                  <div className=" rounded-md flex gap-1 vsm:hidden overflow-hidden bg-[#263159] items-center flex-col">
+                    <button className=" w-full h-5 border-b border-[#2F3960] text-xl text-white" onClick={handleIncrementItem}>
+                      +
+                    </button>
+                    <button className=" w-full flex py-1 items-center justify-center" onClick={handleDecrementItem}>
+                      <MdOutlineDelete className=" text-xl text-red-500"/>
+                    </button>
+                  </div>
             </div>
           ) : (
             <div>
@@ -103,8 +116,9 @@ export default function PeripheryItem({
           )}
         </div>
         <div>
-          <a href="" className=" flex gap-3 hidden lg:block text-[#8190ca]">
-            <MdBalance className="w-6 h-6" />В Сравнение
+          <a href="" className="lg:flex gap-3 hidden text-[#8190ca]">
+            <MdBalance className="w-6 h-6" />
+            В Сравнение
           </a>
         </div>
       </div>

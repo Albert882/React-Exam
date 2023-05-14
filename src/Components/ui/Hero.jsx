@@ -40,86 +40,88 @@ export default function Hero() {
           >
             <AiOutlineRight className="text-3xl" />
           </button>
-          <div className="flex justify-between items-center">
-            <h2 className="text-[#ec4e7f] font-bold text-3xl">
+          <div className="flex sm:flex-row flex-col justify-between items-center">
+            <h2 className="text-[#ec4e7f] font-bold sm:text-3xl text-lg">
               ГОТОВЫЕ СБОРКИ
             </h2>
-            <button className="text-[#34406c] font-bold text-lg flex items-center justify-center gap-5">
+            <button className="text-[#34406c] font-bold sm:text-lg text-base flex items-center justify-center gap-5">
               <Link to="/readybuilds">
                 <p>ВСЕ СБОРКИ</p>
               </Link>
               <AiOutlineRight className="text-[#34406c] text-lg" />
             </button>
           </div>
-          <ul className="w-full flex justify-center gap-3 text-[#34406a] font-bold">
+          <div className="w-full">
+          <ul className="w-full flex gap-3 overflow-y-hidden text-[#34406a] font-bold">
             <li
               onClick={() => handleChangeBuilds("NEWBIE")}
               className={
                 infoReadyBulids === "NEWBIE"
-                  ? "text-[#ec4f7e] underline decoration-2"
-                  : null
+                ? "text-[#ec4f7e] underline decoration-2"
+                : null
               }
-            >
+              >
               <a href="#">NEWBIE</a>
             </li>
             <li
               onClick={() => handleChangeBuilds("STANDART")}
               className={
                 infoReadyBulids === "STANDART"
-                  ? "text-[#ec4f7e] underline decoration-2"
-                  : null
+                ? "text-[#ec4f7e] underline decoration-2"
+                : null
               }
-            >
+              >
               <a href="#">STANDART</a>
             </li>
             <li
               onClick={() => handleChangeBuilds("PRO")}
               className={
                 infoReadyBulids === "PRO"
-                  ? "text-[#ec4f7e] underline decoration-2"
-                  : null
+                ? "text-[#ec4f7e] underline decoration-2"
+                : null
               }
-            >
+              >
               <a href="#">PRO</a>
             </li>
             <li
               onClick={() => handleChangeBuilds("ULTIMATE")}
               className={
                 infoReadyBulids === "ULTIMATE"
-                  ? "text-[#ec4f7e] underline decoration-2"
-                  : null
+                ? "text-[#ec4f7e] underline decoration-2"
+                : null
               }
-            >
+              >
               <a href="#">ULTIMATE</a>
             </li>
             <li
               onClick={() => handleChangeBuilds("INFINITY")}
               className={
                 infoReadyBulids === "INFINITY"
-                  ? "text-[#ec4f7e] underline decoration-2"
-                  : null
+                ? "text-[#ec4f7e] underline decoration-2"
+                : null
               }
-            >
+              >
               <a href="#">INFINITY</a>
             </li>
           </ul>
+                </div>
           <div className="w-[100%] touch-none flex relative">
             <div className="mt-[13px] h-[120%] overflow-x-hidden relative]">
               <div
                 className="grid grid-flow-col gap-[30px] transition-[0.2s] w-full"
                 style={{
                   transform: !moveSlider
-                    ? "translateX(0px)"
-                    : "translateX(-225px)",
+                  ? "translateX(0px)"
+                  : "translateX(-225px)",
                 }}
-              >
+                >
                 {products
                   ?.filter((item) => item?.typebuilds === infoReadyBulids)
                   ?.map((item) => {
                     return (
                       <div
-                        className="relative pt-[23px] cursor-pointer"
-                        key={item?.id}
+                      className="relative pt-[23px] cursor-pointer"
+                      key={item?.id}
                       >
                         <div className="mt-[4px] bg-white w-[200px] gap-5 rounded-[10px] flex items-center flex-col">
                           <div className="flex items-center justify-center flex-col border-b border-[#34406c6c] pb-4">
@@ -127,7 +129,7 @@ export default function Hero() {
                               src={item?.windowimage}
                               className=" mt-[-23px] w-[188px] h-[200px] transition-[2s] hover:translate-x-3"
                               alt=""
-                            />
+                              />
                             <p className="text-[#34406a] text-lg font-bold">
                               {item?.title}
                             </p>

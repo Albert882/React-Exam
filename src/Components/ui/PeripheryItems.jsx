@@ -12,14 +12,13 @@ export default function PeripheryItems({
   maxPrice
 }) {
   const dispatch = useDispatch();
-  console.log(maxPrice);
   return (
-    <div className=" rounded-xl w-full p-8">
+    <div className=" rounded-xl w-full p-3 osm:p-8">
       {products
         ?.filter((item) =>
         brands?.length > 0 && item?.type === info
-          ? item?.brand === brands.find((elem) => elem === item?.brand)
-          : maxPrice > 0 || minPrice > 0 ? item?.price > minPrice && item?.type === info && item?.price < maxPrice 
+          ? item?.brand === brands.find((elem) => elem === item?.brand && item?.price > minPrice && item?.type === info && item?.price < maxPrice)
+          : Number(minPrice) ||  Number(maxPrice) ? item?.price > minPrice && item?.type === info && item?.price < maxPrice 
           : item?.type === info
       )
         ?.map((item) => {
